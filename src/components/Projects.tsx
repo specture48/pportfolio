@@ -86,10 +86,10 @@ const projects: IProject[] = [
         images: []
     },
     {
-        title: "MediaNas SocialApp",
-        link: "https://play.google.com/store/apps/details?id=com.maalialkhair.media&hl=en&gl=US",
-        stack: ["laravel","android","swift"],
-        description: "An social network app that lets you to connect with people around the world\n",
+        title: "Vitastir",
+        link: "",
+        stack: ["laravel","react","next","nest",'socketio'],
+        description: "",
         images: []
     },
     {
@@ -102,10 +102,17 @@ const projects: IProject[] = [
     {
         title: "Baraem",
         link: "",
-        stack: [],
+        stack: ["laravel","vue"],
         description: "",
         images: []
     },
+    // {
+    //     title: "Prokoders Main website",
+    //     link: "",
+    //     stack: [""],
+    //     description: "",
+    //     images: []
+    // }
 ]
 
 
