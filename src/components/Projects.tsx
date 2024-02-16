@@ -106,7 +106,7 @@ const projects: IProject[] = [
         description: "",
         images: []
     },
-    // {
+    // {blue
     //     title: "Prokoders Main website",
     //     link: "",
     //     stack: [""],

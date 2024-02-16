@@ -67,7 +67,7 @@ const Carousel: FC<{ slides: string[] }> = ({slides}) => {
                 slides.map((item) =>
                     (<div key={item} className="h-full mt-5">
                         <div
-                            className="flex container bg-[blue]  h-[600px] rounded-lg items-center justify-center relative overflow-hidden">
+                            className="flex container   h-[600px] rounded-lg items-center justify-center relative overflow-hidden">
                             <LazyImage
                                 src={item}
                                 placeholder={(props: any) => (
