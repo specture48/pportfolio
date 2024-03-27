@@ -6,8 +6,8 @@ import {FC} from "react";
 //     NestjsLine, NodejsLine,
 //     SwiftPlain
 // } from "devicons-react";
-import {SiSocketDotIo} from "@react-icons/all-files/si/SiSocketDotIo";
-import {SiReact} from "@react-icons/all-files/si/SiReact";
+// import {SiSocketDotIo} from "@react-icons/all-files/si/SiSocketDotIo";
+// import {SiReact} from "@react-icons/all-files/si/SiReact";
 
 import Project, {IProject} from "./Project.tsx";
 // import {REPO_PREFIX} from "../../vite.config.ts";
