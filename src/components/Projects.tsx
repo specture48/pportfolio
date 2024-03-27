@@ -10,10 +10,10 @@ import {SiSocketDotIo} from "@react-icons/all-files/si/SiSocketDotIo";
 import {SiReact} from "@react-icons/all-files/si/SiReact";
 
 import Project, {IProject} from "./Project.tsx";
-import {REPO_PREFIX} from "../../vite.config.ts";
+// import {REPO_PREFIX} from "../../vite.config.ts";
 
 export  function getImage(path:string){
-    return `${REPO_PREFIX}/`+path
+    return `/o/`+path
 }
 
 const projects: IProject[] = [
