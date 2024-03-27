@@ -9,7 +9,6 @@ const NavBar: FC = () => {
     {/*mb-5*/}
     h-[100px]
     shadow-xl
-
     fixed
     top-0
     w-full
@@ -38,7 +37,7 @@ px-5
 
                 <div className="
             ">
-                    <Link className="w-[50%] h-[50%]" to="/public">
+                    <Link  className="w-[50%] h-[50%]" to="/public">
                         <img src="/public/menu.png" alt=""/>
                     </Link>
                 </div>

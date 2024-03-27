@@ -43,7 +43,14 @@ const Project: FC<{ project: IProject }> = ({project}) => {
             </div>
 
             <div className="flex gap-2 mt-5">
-                <button className="w-[2 00px] rounded outline  text-white  p-2 mt-5" onClick={open}>Screenshots</button>
+                {Boolean(project.images.length)
+                    &&
+                    (
+                        <button className="w-[2 00px] rounded outline  text-white  p-2 mt-5"
+                                onClick={open}>Screenshots</button>
+
+                    )
+                }
                 {Boolean(project.link)
                     &&
                     (

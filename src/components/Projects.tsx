@@ -6,18 +6,25 @@ import {
     NestjsLine, NodejsLine,
     SwiftPlain
 } from "devicons-react";
-import Project, {IProject} from "./Project.tsx";
 import {SiSocketDotIo} from "@react-icons/all-files/si/SiSocketDotIo";
 import {SiReact} from "@react-icons/all-files/si/SiReact";
+
+import Project, {IProject} from "./Project.tsx";
+
 
 const projects: IProject[] = [
     {
         link: "https://cloud.ordro.app",
         images: [
-            "https://i.postimg.cc/mkmtXvdL/photo-2024-01-05-20-37-44.jpg",
-            "https://i.postimg.cc/sxYMYBWh/photo-2024-01-05-20-23-38.jpg",
-            "https://i.postimg.cc/j5zx9pjV/photo-2024-01-05-20-26-37.jpg",
-            "https://i.postimg.cc/mZXfrpMQ/Screenshot-from-2024-01-05-16-11-49.png"
+            "/public/ordro/1.png",
+            "/public/ordro/2.png",
+            "/public/ordro/3.png",
+            "/public/ordro/4.png",
+            "/public/ordro/5.png",
+            "/public/ordro/6.png",
+            "/public/ordro/7.png",
+            "/public/ordro/8.png",
+            "/public/ordro/9.png",
         ],
         stack: ["express", "react", "flutter"],
         title: "Ordro",
@@ -37,9 +44,8 @@ const projects: IProject[] = [
     {
         title: "MemoNas Chat App",
         images: [
-            "https://i.postimg.cc/C14ZDpYM/photo-2024-01-05-18-19-30.jpg",
-            "https://i.postimg.cc/8PcFFYYD/photo-2024-01-05-18-19-29.jpg",
-            "https://i.postimg.cc/VLhJXRyt/photo-2024-01-05-18-19-26.jpg"
+            "/public/memo/1.png",
+            "/public/memo/1.png",
         ],
         stack: ["node", "socketio", "express", "android", "swift"],
         link: "https://play.google.com/store/apps/details?id=com.yawar.memo&hl=en&gl=US",
@@ -48,14 +54,15 @@ const projects: IProject[] = [
     {
         title: "Ha55a Exchange",
         images: [
-            "https://i.postimg.cc/hvkqthwX/Screenshot-from-2024-01-05-15-50-11.png",
-            "https://i.postimg.cc/wBpTk4w1/Screenshot-from-2024-01-05-15-57-23.png",
-            "https://i.postimg.cc/SKkk92K8/Screenshot-from-2024-01-05-15-52-55.png",
-            "https://i.postimg.cc/HxLmSqXk/Screenshot-from-2024-01-05-15-52-05.png"
+            "/public/ha55aExchange/1.png",
+            "/public/ha55aExchange/2.png",
+            "/public/ha55aExchange/3.png",
+            "/public/ha55aExchange/4.png",
+            "/public/ha55aExchange/5.png",
         ],
         link: "https://ha55a.exchange",
         stack: ["laravel"],
-        description: "Spearheaded the development of a secure and efficient Iraqi money\n      exchange website using Laravel PHP. This project enabled users to conveniently exchange currency while\n      ensuring the utmost security.",
+        description: "Spearheaded the development of a secure and efficient Iraqi money\n exchange website using Laravel PHP. This project enabled users to conveniently exchange currency while\n      ensuring the utmost security.",
     },
     {
         title: "StayOn",
@@ -71,8 +78,8 @@ const projects: IProject[] = [
     {
         title: "LPCenter",
         images: [
-            "https://i.postimg.cc/rFx5Ws7V/photo-2024-01-06-21-51-25.jpg",
-            "https://i.postimg.cc/rFx5Ws7V/photo-2024-01-06-21-51-25.jpg"
+            "/public/lpc/1.png",
+            "/public/lpc/2.png",
         ],
         link: "https://www.lpcentre.com",
         description: "London Premier Centre is a UK leading training provider based in London and specialises in international short courses.\"",
@@ -83,27 +90,49 @@ const projects: IProject[] = [
         link: "https://www.ha55a.com",
         stack: ["netcore"],
         description: "Digital Services Store allow merchants to sell their services",
-        images: []
+        images: [
+            "/public/ha55a/1.png",
+            "/public/ha55a/2.png",
+        ]
     },
     {
         title: "Vitastir",
         link: "",
         stack: ["laravel","react","next","nest",'socketio'],
-        description: "",
-        images: []
+        description: "a comprehensive health e-commerce platform facilitating the seamless purchase of medical products. Key features include a user-friendly interface, secure transactions, prescription management, personalized recommendations, and a health information hub.",
+        images: [
+            "/public/vita/1.png",
+            "/public/vita/2.png",
+            "/public/vita/3.png",
+            "/public/vita/4.png",
+            "/public/vita/5.png",
+            "/public/vita/6.png",
+            "/public/vita/7.png",
+            "/public/vita/8.png",
+            "/public/vita/9.png",
+            "/public/vita/10.png",
+            "/public/vita/11.png",
+            "/public/vita/12.png",
+            "/public/vita/13.png",
+            "/public/vita/14.png",
+            "/public/vita/15.png",
+            "/public/vita/16.png",
+            "/public/vita/17.png",
+            "/public/vita/18.png",
+        ]
     },
     {
         title: "Yamama Cement",
         link: "",
         stack: ["netcore"],
-        description: "",
+        description: "Dashboard for Yamama Cement company in ksa",
         images: []
     },
     {
         title: "Baraem",
         link: "",
         stack: ["laravel","vue"],
-        description: "",
+        description: "non profit organization",
         images: []
     },
     // {blue
