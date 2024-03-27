@@ -13,7 +13,7 @@ import Project, {IProject} from "./Project.tsx";
 // import {REPO_PREFIX} from "../../vite.config.ts";
 
 export  function getImage(path:string){
-    return `/o/`+path
+    return `o/`+path
 }
 
 const projects: IProject[] = [
