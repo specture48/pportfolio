@@ -10,21 +10,25 @@ import {SiSocketDotIo} from "@react-icons/all-files/si/SiSocketDotIo";
 import {SiReact} from "@react-icons/all-files/si/SiReact";
 
 import Project, {IProject} from "./Project.tsx";
+import {REPO_PREFIX} from "../../vite.config.ts";
 
+export  function getImage(path:string){
+    return `${REPO_PREFIX}/`+path
+}
 
 const projects: IProject[] = [
     {
         link: "https://cloud.ordro.app",
         images: [
-            "/public/ordro/1.png",
-            "/public/ordro/2.png",
-            "/public/ordro/3.png",
-            "/public/ordro/4.png",
-            "/public/ordro/5.png",
-            "/public/ordro/6.png",
-            "/public/ordro/7.png",
-            "/public/ordro/8.png",
-            "/public/ordro/9.png",
+            getImage("ordro/1.png"),
+            getImage("ordro/2.png"),
+            getImage("ordro/3.png"),
+            getImage("ordro/4.png"),
+            getImage("ordro/5.png"),
+            getImage("ordro/6.png"),
+            getImage("ordro/7.png"),
+            getImage("ordro/8.png"),
+            getImage("ordro/9.png"),
         ],
         stack: ["express", "react", "flutter"],
         title: "Ordro",
@@ -44,8 +48,8 @@ const projects: IProject[] = [
     {
         title: "MemoNas Chat App",
         images: [
-            "/public/memo/1.png",
-            "/public/memo/1.png",
+            getImage("memo/1.png"),
+            getImage("memo/1.png"),
         ],
         stack: ["node", "socketio", "express", "android", "swift"],
         link: "https://play.google.com/store/apps/details?id=com.yawar.memo&hl=en&gl=US",
@@ -54,11 +58,12 @@ const projects: IProject[] = [
     {
         title: "Ha55a Exchange",
         images: [
-            "/public/ha55aExchange/1.png",
-            "/public/ha55aExchange/2.png",
-            "/public/ha55aExchange/3.png",
-            "/public/ha55aExchange/4.png",
-            "/public/ha55aExchange/5.png",
+            getImage("ha55aExchange/1.png"),
+            getImage("ha55aExchange/2.png"),
+            getImage("ha55aExchange/3.png"),
+            getImage("ha55aExchange/4.png"),
+            getImage("ha55aExchange/5.png"),
+
         ],
         link: "https://ha55a.exchange",
         stack: ["laravel"],
@@ -78,8 +83,8 @@ const projects: IProject[] = [
     {
         title: "LPCenter",
         images: [
-            "/public/lpc/1.png",
-            "/public/lpc/2.png",
+            getImage("lpc/1.png"),
+            getImage("lpc/2.png"),
         ],
         link: "https://www.lpcentre.com",
         description: "London Premier Centre is a UK leading training provider based in London and specialises in international short courses.\"",
@@ -91,8 +96,8 @@ const projects: IProject[] = [
         stack: ["netcore"],
         description: "Digital Services Store allow merchants to sell their services",
         images: [
-            "/public/ha55a/1.png",
-            "/public/ha55a/2.png",
+            getImage("ha55a/1.png"),
+            getImage("ha55a/2.png"),
         ]
     },
     {
@@ -101,24 +106,28 @@ const projects: IProject[] = [
         stack: ["laravel","react","next","nest",'socketio'],
         description: "a comprehensive health e-commerce platform facilitating the seamless purchase of medical products. Key features include a user-friendly interface, secure transactions, prescription management, personalized recommendations, and a health information hub.",
         images: [
-            "/public/vita/1.png",
-            "/public/vita/2.png",
-            "/public/vita/3.png",
-            "/public/vita/4.png",
-            "/public/vita/5.png",
-            "/public/vita/6.png",
-            "/public/vita/7.png",
-            "/public/vita/8.png",
-            "/public/vita/9.png",
-            "/public/vita/10.png",
-            "/public/vita/11.png",
-            "/public/vita/12.png",
-            "/public/vita/13.png",
-            "/public/vita/14.png",
-            "/public/vita/15.png",
-            "/public/vita/16.png",
-            "/public/vita/17.png",
-            "/public/vita/18.png",
+            getImage("vita/1.png"),
+            getImage("vita/2.png"),
+            getImage("vita/3.png"),
+            getImage("vita/4.png"),
+            getImage("vita/5.png"),
+            getImage("vita/6.png"),
+            getImage("vita/7.png"),
+            getImage("vita/8.png"),
+            getImage("vita/9.png"),
+            getImage("vita/9.png"),
+            getImage("vita/9.png"),
+            getImage("vita/9.png"),
+            getImage("vita/10.png"),
+            getImage("vita/11.png"),
+            getImage("vita/12.png"),
+            getImage("vita/13.png"),
+            getImage("vita/14.png"),
+            getImage("vita/15.png"),
+            getImage("vita/16.png"),
+            getImage("vita/17.png"),
+            getImage("vita/18.png"),
+
         ]
     },
     {
