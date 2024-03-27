@@ -1,11 +1,11 @@
 import {FC} from "react";
-import {
-    AndroidPlain, DotnetcorePlain,
-    FlutterPlain, GraphqlPlain,
-    LaravelLine,
-    NestjsLine, NodejsLine,
-    SwiftPlain
-} from "devicons-react";
+// import {
+//     AndroidPlain, DotnetcorePlain,
+//     FlutterPlain, GraphqlPlain,
+//     LaravelLine,
+//     NestjsLine, NodejsLine,
+//     SwiftPlain
+// } from "devicons-react";
 import {SiSocketDotIo} from "@react-icons/all-files/si/SiSocketDotIo";
 import {SiReact} from "@react-icons/all-files/si/SiReact";
 
@@ -13,7 +13,7 @@ import Project, {IProject} from "./Project.tsx";
 // import {REPO_PREFIX} from "../../vite.config.ts";
 
 export  function getImage(path:string){
-    return `o/`+path
+    return path
 }
 
 const projects: IProject[] = [
@@ -157,16 +157,16 @@ const projects: IProject[] = [
 //TODO mention that we use NX,SAAS Multi tenancy Structure
 
 export const iconMap = {
-    "nest": <NestjsLine color="white" size="75"/>,
-    "laravel": <LaravelLine color="white" size="75"/>,
-    "flutter": <FlutterPlain color="white" size="75"/>,
-    "swift": <SwiftPlain color="white" size="75"/>,
-    "android": <AndroidPlain color="white" size="75"/>,
-    "node": <NodejsLine color="white" size="75"/>,
-    "graphql": <GraphqlPlain color="white" size="75"/>,
-    "socketio": <SiSocketDotIo size="75"/>,
-    "react": <SiReact size="75"/>,
-    "netcore": <DotnetcorePlain color="white" size="75"/>,
+    // "nest": <NestjsLine color="white" size="75"/>,
+    // "laravel": <LaravelLine color="white" size="75"/>,
+    // "flutter": <FlutterPlain color="white" size="75"/>,
+    // "swift": <SwiftPlain color="white" size="75"/>,
+    // "android": <AndroidPlain color="white" size="75"/>,
+    // "node": <NodejsLine color="white" size="75"/>,
+    // "graphql": <GraphqlPlain color="white" size="75"/>,
+    // "socketio": <SiSocketDotIo size="75"/>,
+    // "react": <SiReact size="75"/>,
+    // "netcore": <DotnetcorePlain color="white" size="75"/>,
 }
 
 const Projects: FC = () => {
