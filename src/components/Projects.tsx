@@ -18,7 +18,7 @@ export  function getImage(path:string){
 
 const projects: IProject[] = [
     {
-        link: "https://cloud.ordro.app",
+        link: "https://play.google.com/store/apps/details?id=com.ordro.retailapp&hl=en",
         images: [
             getImage("ordro/1.png"),
             getImage("ordro/2.png"),
@@ -64,6 +64,29 @@ const projects: IProject[] = [
         description: "The platform boasted a rich set of features, including immersive 3D and 2D maps, real-\ntime reservation boards, visitor management, and dynamic digital signage.",
     },
     {
+        title: "Qahwah",
+        images: [
+            getImage("qahwah/1.webp"),
+            getImage("qahwah/2.webp"),
+            getImage("qahwah/3.webp"),
+            getImage("qahwah/4.webp"),
+        ],
+        stack: ["laravel", "flutter"],
+        link: "https://play.google.com/store/apps/details?id=com.divcodes.qahwahhouse&hl=en",
+        description: "Qahwah House, an eCommerce platform dedicated to providing an exceptional coffee experience with premium organic coffee grown in Yemen.• Implemented features to enhance user experience and strea",
+    },
+    {
+        title: "StayOn",
+        images: [
+            "https://play-lh.googleusercontent.com/_E0qHMzDJD6z-69KXxUoALv2sLjgK_TgVxrG9FCDY-2nDewaWCyUU4wMorgBU6m4mgId=w2560-h1440-rw",
+            "https://play-lh.googleusercontent.com/Olk5mDPQqetRsK5IGR8qpQVLCGSBjn2z5mDuRwoy1Ka7zLoE6N9Ovig47GYS1tUSISwj=w2560-h1440-rw",
+            "https://play-lh.googleusercontent.com/bjd5LYx5bNSqDynvVkUrq7l1KFDfQE6eghtMLZcTNosfDsxVFjGvdVMFBr39TNG-R90M=w2560-h1440-rw"
+        ],
+        link: "https://play.google.com/store/apps/details?id=co.flexsol.stayon&hl=en_US&gl=US",
+        stack: ["laravel", "flutter"],
+        description: "The Stay On application is an application of electronic courses in an academic and high-level manner, for\n professors and lecturers known in their field.",
+    },
+    {
         title: "MemoNas Chat App",
         images: [
             getImage("memo/1.png"),
@@ -87,17 +110,7 @@ const projects: IProject[] = [
         stack: ["laravel"],
         description: "Spearheaded the development of a secure and efficient Iraqi money\n exchange website using Laravel PHP. This project enabled users to conveniently exchange currency while\n      ensuring the utmost security.",
     },
-    {
-        title: "StayOn",
-        images: [
-            "https://play-lh.googleusercontent.com/_E0qHMzDJD6z-69KXxUoALv2sLjgK_TgVxrG9FCDY-2nDewaWCyUU4wMorgBU6m4mgId=w2560-h1440-rw",
-            "https://play-lh.googleusercontent.com/Olk5mDPQqetRsK5IGR8qpQVLCGSBjn2z5mDuRwoy1Ka7zLoE6N9Ovig47GYS1tUSISwj=w2560-h1440-rw",
-            "https://play-lh.googleusercontent.com/bjd5LYx5bNSqDynvVkUrq7l1KFDfQE6eghtMLZcTNosfDsxVFjGvdVMFBr39TNG-R90M=w2560-h1440-rw"
-        ],
-        link: "https://play.google.com/store/apps/details?id=co.flexsol.stayon&hl=en_US&gl=US",
-        stack: ["laravel", "flutter"],
-        description: "The Stay On application is an application of electronic courses in an academic and high-level manner, for\n professors and lecturers known in their field.",
-    },
+    
     {
         title: "LPCenter",
         images: [
@@ -120,7 +133,7 @@ const projects: IProject[] = [
     },
     {
         title: "Vitastir",
-        link: "",
+        link: "https://thevitatest.com",
         stack: ["laravel","react","next","nest",'socketio'],
         description: "a comprehensive health e-commerce platform facilitating the seamless purchase of medical products. Key features include a user-friendly interface, secure transactions, prescription management, personalized recommendations, and a health information hub.",
         images: [

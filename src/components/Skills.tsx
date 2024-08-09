@@ -2,17 +2,25 @@ import {FC} from "react";
 import Skill, {ISkill} from "./Skill.tsx";
 
 const Skills: FC = () => {
-    const mySkills: ISkill[] = [{
-        title: "Rest Api & Graphql",
-        description: "I utilized both Restful API and GraphQL to  build scalable  applications."
-    },
+        const mySkills: ISkill[] = [{
+            title: "Rest Api & Graphql",
+            description: "I utilized both Restful API and GraphQL to build scalable applications."
+        },
         {
             title: "RealTime",
             description: "Dived into the realm of real-time technologies such as Socket.io, Firebase."
         },
         {
-            title:"Integrations with 3party",
-            description:"IOT [Airthings,Webex,Cisco], Payment Gateways ,Social Media Platforms,Smart Workspaces"
+            title: "Integrations with 3party",
+            description: "IOT [Airthings, Webex, Cisco], Payment Gateways, Social Media Platforms, Smart Workspaces."
+        },
+        {
+            title: "Microservices",
+            description: "Architected and implemented microservices-based systems, enhancing scalability, fault tolerance, and deployment agility through containerization (Docker) "
+        },
+        {
+            title: "Project Leadership & Management",
+            description: "Led cross-functional teams in the successful delivery of complex software projects. Managed project timelines, coordinated tasks among team members, and ensured alignment with business goals, resulting in a consistent track record of on-time and on-budget deliveries."
         }
     ]
 
