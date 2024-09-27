@@ -3,10 +3,8 @@ import Email from "../assets/icons/Email";
 import Phone from "../assets/icons/Phone";
 import WhatsApp from "../assets/icons/WhatsApp";
 import LinkedIn from "../assets/icons/LinkedIn";
-import Codeforces from "../assets/icons/Codeforces";
 import Location from "../assets/icons/Location";
 import Date from "../assets/icons/Date";
-import { StackoverflowLine } from "devicons-react";
 import Stackoverflow from "../assets/icons/StackOverFlow";
 
 const Bio: FC = () => {
