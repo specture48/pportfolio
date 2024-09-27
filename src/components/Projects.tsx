@@ -161,20 +161,20 @@ const projects: IProject[] = [
 
         ]
     },
-    {
-        title: "Yamama Cement",
-        link: "",
-        stack: ["netcore"],
-        description: "Dashboard for Yamama Cement company in ksa",
-        images: []
-    },
-    {
-        title: "Baraem",
-        link: "",
-        stack: ["laravel","vue"],
-        description: "non profit organization",
-        images: []
-    },
+    // {
+    //     title: "Yamama Cement",
+    //     link: "",
+    //     stack: ["netcore"],
+    //     description: "Dashboard for Yamama Cement company in ksa",
+    //     images: []
+    // },
+    // {
+    //     title: "Baraem",
+    //     link: "",
+    //     stack: ["laravel","vue"],
+    //     description: "non profit organization",
+    //     images: []
+    // },
     {
         title: "Prokoders CMS website",
         link: "https://www.prokoders.com",

@@ -2,6 +2,8 @@ import Bio from "../components/Bio.tsx";
 import Projects from "../components/Projects.tsx";
 import Skills from "../components/Skills.tsx";
 import Footer from "../components/Footer.tsx";
+import Educations from "../components/Educations.tsx";
+import WorkExperiences from "../components/WorkExperiences.tsx";
 
 function Home() {
     return (
@@ -10,6 +12,8 @@ function Home() {
                 <Bio/>
                 <Skills/>
                 <Projects/>
+                <Educations/>
+                <WorkExperiences  />
                 <Footer/>
             </div>
         </div>

@@ -7,11 +7,11 @@ const Skills: FC = () => {
             description: "I utilized both Restful API and GraphQL to build scalable applications."
         },
         {
-            title: "RealTime",
+            title: "RealTime Tech",
             description: "Dived into the realm of real-time technologies such as Socket.io, Firebase."
         },
         {
-            title: "Integrations with 3party",
+            title: "Integrations with 3dparty",
             description: "IOT [Airthings, Webex, Cisco], Payment Gateways, Social Media Platforms, Smart Workspaces."
         },
         {
