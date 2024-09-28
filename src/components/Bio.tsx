@@ -112,20 +112,10 @@ const Bio: FC = () => {
             {/* I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I’ve been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices. */}
         {/* </p> */}
 
-		{/* <Typewriter
-  options={{
-    strings: ['Hello', 'World'],
-    autoStart: true,
-    loop: true,
-	
-  }}
-/> */}
 
 <Typewriter
   options={{
 	cursor:"",
-    // Speed up typing
-    // typeSpeed: 50,    // Reduce this number to make typing faster (default is around 100ms)
     deleteSpeed: 30,  // Adjust this for deleting speed (if you use the delete functionality)
     delay: 0,        // This is the delay before typing starts, you can lower this too
   }}
