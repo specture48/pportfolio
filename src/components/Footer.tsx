@@ -8,7 +8,7 @@ const Footer: FC = () => {
                 <p>© 2024 All rights reserved.</p>
             </div>
             <div className="flex">
-                <img src="/linkedin.png" className="mx-2 w-[50px] h-[50px]" alt=""/>
+                {/* <img src="/linkedin.png" className="mx-2 w-[50px] h-[50px]" alt=""/> */}
             </div>
         </div>
     </div>

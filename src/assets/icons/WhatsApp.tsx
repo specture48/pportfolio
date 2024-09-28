@@ -25,4 +25,5 @@ function WhatsApp() {
 	);
 }
 
+
 export default WhatsApp;

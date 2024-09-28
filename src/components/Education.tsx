@@ -1,4 +1,5 @@
 import  {FC} from "react";
+import Graduation from "../assets/icons/Graduation";
 
 export interface IEducation {
     institution: string
@@ -16,6 +17,10 @@ const Education: FC<{ education: IEducation }> = ({education}) => {
        
        <div className="flex">
  
+
+<div>
+  <Graduation/>
+</div>
 
   <div className="flex justify-between w-full">
     <div>

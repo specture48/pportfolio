@@ -6,6 +6,8 @@ import LinkedIn from "../assets/icons/LinkedIn";
 import Location from "../assets/icons/Location";
 import Date from "../assets/icons/Date";
 import Stackoverflow from "../assets/icons/StackOverFlow";
+import Typewriter from 'typewriter-effect';
+
 
 const Bio: FC = () => {
     return <div
@@ -105,14 +107,39 @@ const Bio: FC = () => {
 						</div>
         </div>
         <div className="mt-10">
-        {/* <p className="text-4xl font-bold mb-10 ">
-            Hi,I am Daniel
-        </p> */}
-        <p className="text-2xl  leading-loose">
+        {/* <p className="text-2xl  leading-loose"> */}
             {/* I have four years of web development experience, specializing in backend technologies. For three years, I excelled in PHP, working with the Laravel framework. In the last two years, I transitioned to Node.js, specializing in Express and Nest.js. Proficient in MySQL and PostgresSQL, my approach emphasizes project success, and I am committed to staying current with industry trends */}
-            I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I’ve been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices.
-        </p>
+            {/* I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I’ve been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices. */}
+        {/* </p> */}
+
+		{/* <Typewriter
+  options={{
+    strings: ['Hello', 'World'],
+    autoStart: true,
+    loop: true,
+	
+  }}
+/> */}
+
+<Typewriter
+  options={{
+	cursor:"",
+    // Speed up typing
+    // typeSpeed: 50,    // Reduce this number to make typing faster (default is around 100ms)
+    deleteSpeed: 30,  // Adjust this for deleting speed (if you use the delete functionality)
+    delay: 0,        // This is the delay before typing starts, you can lower this too
+  }}
+  onInit={(typewriter) => {
+    typewriter
+      .typeString(`<p class="text-2xl  leading-loose">
+		I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I’ve been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices.
+	</p>`)
+      .start();
+  }}
+/>
         </div>
+
+		
         
     </div>
 }

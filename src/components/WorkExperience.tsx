@@ -1,4 +1,5 @@
 import  {FC} from "react";
+import Work from "../assets/icons/Work";
 
 export interface IWorkExperience {
     title: string
@@ -12,7 +13,14 @@ const WorkExperience: FC<{ workExperience: IWorkExperience }> = ({ workExperienc
   const { title, company, date, description } = workExperience;
   
   return (
-    <div className='mt-5 flex rounded-md hover:bg-[#6881cb] transition-all duration-1000 flex-col py-10 px-2 text-white'>
+    <div className='my-2 flex rounded-md hover:bg-[#6881cb] transition-all duration-1000 flex-col py-10 px-2 text-white'>
+     
+
+      <div className="flex">
+      <div className="mr-2">
+        <Work/>
+      </div>
+
       <div className="flex justify-between w-full">
         <div>
           <p className="font-bold">{company}</p>
@@ -20,8 +28,12 @@ const WorkExperience: FC<{ workExperience: IWorkExperience }> = ({ workExperienc
         </div>
         <div className="ml-auto">{date}</div>
       </div>
+      
+    
 
-      {/* Render the description as a list of bullet points */}
+      
+    </div>
+    <div>
       {description && (
         <ul className="mt-4 list-disc pl-5">
           {description.map((desc, index) => (
@@ -31,6 +43,7 @@ const WorkExperience: FC<{ workExperience: IWorkExperience }> = ({ workExperienc
           ))}
         </ul>
       )}
+      </div>
     </div>
   );
 };
