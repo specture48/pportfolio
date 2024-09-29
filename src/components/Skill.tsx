@@ -6,7 +6,7 @@ export interface ISkill{
 
 const Skill: FC<{ skill: ISkill }> = ({skill}) => {
     const {description,title}=skill
-    return (<div  className='flex  rounded-md hover:bg-[#6881cb] transition-all duration-1000 flex-col p-10 sm:mx-5 text-white border-[1px]   '>
+    return (<div  className='flex  rounded-md hover:bg-[#6881cb] transition-all duration-1000 flex-col p-10  text-white border-[1px]   '>
 
         <div className="flex h-full flex-col items-center justify-between my-auto  ">
             <div className="text-2xl font-extrabold leading-non mb-5">

@@ -15,7 +15,8 @@ const Project: FC<{ project: IProject }> = ({project}) => {
     const {link, title, images, description, stack} = project
     const [SliderModal, {open}] = useModal();
     return (<div
-        className='flex rounded-md hover:bg-[#6881cb] transition-all duration-1000 flex-col p-10 text-white border-[1px]   '>
+        className='flex rounded-md hover:bg-[#6881cb] transition-all duration-1000 flex-col p-10 text-white 
+        border-[1px]   '>
         <SliderModal className="">
             <Carousel slides={images}/>
         </SliderModal>

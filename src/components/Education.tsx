@@ -16,9 +16,8 @@ const Education: FC<{ education: IEducation }> = ({education}) => {
           '>
        
        <div className="flex">
- 
 
-<div>
+<div className="mr-2">
   <Graduation/>
 </div>
 
