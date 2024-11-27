@@ -4,6 +4,7 @@ import Skills from "../components/Skills.tsx";
 import Footer from "../components/Footer.tsx";
 import Educations from "../components/Educations.tsx";
 import WorkExperiences from "../components/WorkExperiences.tsx";
+import ChallengesAndOptimizations from "../components/ChallengesAndOptimizations.tsx";
 
 function Home() {
     return (
@@ -14,6 +15,7 @@ function Home() {
                 <Projects/>
                 <Educations/>
                 <WorkExperiences  />
+                <ChallengesAndOptimizations/>
                 <Footer/>
             </div>
         </div>

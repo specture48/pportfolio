@@ -14,10 +14,10 @@ const Skills: FC = () => {
             title: "Integrations with 3dparty",
             description: "IOT [Airthings, Webex, Cisco], Payment Gateways, Social Media Platforms, Smart Workspaces."
         },
-        {
-            title: "Microservices",
-            description: "Architected and implemented microservices-based systems, enhancing scalability, fault tolerance, and deployment agility through containerization (Docker) "
-        },
+        // {
+        //     title: "Microservices",
+        //     description: "Architected and implemented microservices-based systems, enhancing scalability, fault tolerance, and deployment agility through containerization (Docker) "
+        // },
         {
             title: "Project Leadership & Management",
             description: "Led cross-functional teams in the successful delivery of complex software projects. Managed project timelines, coordinated tasks among team members, and ensured alignment with business goals, resulting in a consistent track record of on-time and on-budget deliveries."

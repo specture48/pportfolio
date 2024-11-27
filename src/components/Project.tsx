@@ -1,4 +1,4 @@
-import  {FC} from "react";
+import {FC} from "react";
 import useModal from "../hooks/useModal.tsx";
 import Carousel from "./Carousel.tsx";
 import {iconMap} from "./Projects.tsx";
@@ -35,7 +35,7 @@ const Project: FC<{ project: IProject }> = ({project}) => {
             <div className='mt-5 flex justify-between w-full'>
                 {
                     stack.map(skillName => {
-                        //@ts-ignore
+                            //@ts-ignore
                             const Comp = iconMap[skillName]
                             return (Comp)
                         }
