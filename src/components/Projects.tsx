@@ -201,7 +201,7 @@ export const iconMap = {
 }
 
 const Projects: FC = () => {
-    return (<div>
+    return (<section id="projects">
         <div>
             <p className="text-4xl  w-full
     mx-auto
@@ -222,6 +222,6 @@ const Projects: FC = () => {
                 })
             }
         </div>
-    </div>)
+    </section>)
 }
 export default Projects

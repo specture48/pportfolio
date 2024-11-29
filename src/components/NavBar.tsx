@@ -1,9 +1,9 @@
-import { FC } from "react";
+import {FC} from "react";
 
 const NavBar: FC = () => {
-  return (
-    <div
-      className="
+    return (
+        <div
+            className="
         z-30
         h-[100px]
         shadow-xl
@@ -11,9 +11,9 @@ const NavBar: FC = () => {
         top-0
         w-full
         bg-[black]"
-    >
-      <div
-        className="
+        >
+            <div
+                className="
           flex
           justify-between
           h-full
@@ -21,34 +21,47 @@ const NavBar: FC = () => {
           container
           mx-auto
           px-5"
-      >
-        {/* Logo / Name */}
-        <div className="items-center flex h-full justify-center">
-          <span className="text-4xl font-bold text-white">Daniel</span>
-          <span className="text-[red] text-4xl">.</span>
+            >
+                {/* Logo / Name */}
+                <div className="items-center flex h-full justify-center">
+                    <span className="text-4xl font-bold text-white">Daniel</span>
+                    <span className="text-[red] text-4xl">.</span>
+                </div>
+
+                {/* Right-side buttons */}
+                <div className="flex items-center space-x-5">
+                    <a
+                        href="#work-experiences"
+                        className="text-white hover:text-red-500 transition-all duration-300"
+                    >
+                        Work Experience
+                    </a>
+                    <a
+                        href="#projects"
+                        className="text-white hover:text-red-500 transition-all duration-300"
+                    >
+                        Projects
+                    </a>
+                    {/*<a*/}
+                    {/*    href="#skills"*/}
+                    {/*    className="text-white hover:text-red-500 transition-all duration-300"*/}
+                    {/*>*/}
+                    {/*    Skills*/}
+                    {/*</a>*/}
+
+
+                    {/* Download CV Button */}
+                    <a
+                        href="cv.pdf"
+                        download="Daniel-CV.pdf"
+                        className="border border-white text-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition-all duration-300 inline-flex items-center"
+                    >
+                        <span>Download CV</span>
+                    </a>
+                </div>
+            </div>
         </div>
-
-        {/* Right-side buttons: Download CV and Menu Icon */}
-        <div className="flex items-center space-x-5">
-          {/* Download CV Button */}
-          <a
-  href="cv.pdf"
-  download="Daniel-CV.pdf"
-  className="border border-white text-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition-all duration-300 inline-flex items-center"
->
-  {/* <img
-    src="linkedin.png"
-    alt="Download CV"
-    className="w-6 h-6 inline-block mr-2"
-  /> */}
-  <span>Download CV</span>
-</a>
-
-
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default NavBar;

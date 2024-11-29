@@ -71,7 +71,10 @@ const workExperiences: IWorkExperience[] = [
 
 //TODO mention that we use NX,SAAS Multi tenancy Structure
 const WorkExperiences: FC = () => {
-    return (<div>
+    return (
+
+        <section id="work-experiences">
+        <div>
         <div>
             <p className="
             text-4xl 
@@ -93,6 +96,7 @@ const WorkExperiences: FC = () => {
                 })
             }
         </div>
-    </div>)
+    </div>
+        </section>)
 }
 export default WorkExperiences

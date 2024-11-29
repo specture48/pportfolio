@@ -11,10 +11,10 @@ function Home() {
         <div className="h-full  pt-[100px]  mx-10">
             <div className="">
                 <Bio/>
-                <Skills/>
+                {/*<Skills/>*/}
                 <Projects/>
-                <Educations/>
                 <WorkExperiences  />
+                <Educations/>
                 <ChallengesAndOptimizations/>
                 <Footer/>
             </div>
