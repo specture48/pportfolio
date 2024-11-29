@@ -10,9 +10,10 @@ import {FC} from "react";
 // import {SiReact} from "@react-icons/all-files/si/SiReact";
 
 import Project, {IProject} from "./Project.tsx";
+
 // import {REPO_PREFIX} from "../../vite.config.ts";
 
-export  function getImage(path:string){
+export function getImage(path: string) {
     return path
 }
 
@@ -110,7 +111,7 @@ const projects: IProject[] = [
         stack: ["laravel"],
         description: "Spearheaded the development of a secure and efficient Iraqi money\n exchange website using Laravel PHP. This project enabled users to conveniently exchange currency while\n      ensuring the utmost security.",
     },
-    
+
     {
         title: "LPCenter",
         images: [
@@ -134,7 +135,7 @@ const projects: IProject[] = [
     {
         title: "Vitastir",
         link: "https://thevitatest.com",
-        stack: ["laravel","react","next","nest",'socketio'],
+        stack: ["laravel", "react", "next", "nest", 'socketio'],
         description: "a comprehensive health e-commerce platform facilitating the seamless purchase of medical products. Key features include a user-friendly interface, secure transactions, prescription management, personalized recommendations, and a health information hub.",
         images: [
             getImage("vita/1.png"),

@@ -3,7 +3,6 @@ import {FC} from "react";
 import Education, { IEducation } from "./Education.tsx";
 
 
-
 const educations: IEducation[] = [
     {
         institution: "Syrian Virtual University",
@@ -32,7 +31,6 @@ const Educations: FC = () => {
             font-extrabold mb-10">Education </p>
         </div>
         <div className="
-        my-5
      w-full
  mx-auto
     container

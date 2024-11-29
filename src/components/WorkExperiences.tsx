@@ -35,7 +35,7 @@ const workExperiences: IWorkExperience[] = [
       ],
     },
     {
-      company: "YAWAR",
+      company: "Yawar",
       location: "Iraq",
       title: "Backend Developer",
       date: "May 2023 – Aug 2024",
@@ -46,7 +46,7 @@ const workExperiences: IWorkExperience[] = [
       ],
     },
     {
-      company: "PROKODERS",
+      company: "Prokoders",
       location: "Remote, United Arab Emirates",
       title: "Backend Developer",
       date: "Dec 2021 – Jan 2023",

@@ -24,21 +24,21 @@ const NavBar: FC = () => {
             >
                 {/* Logo / Name */}
                 <div className="items-center flex h-full justify-center">
-                    <span className="text-4xl font-bold text-white">Daniel</span>
-                    <span className="text-[red] text-4xl">.</span>
+                    <span className="text-4xl font-bold text-[#6881cb]">Daniel</span>
+                    <span className="text-[#6881cb] text-4xl">.</span>
                 </div>
 
                 {/* Right-side buttons */}
                 <div className="flex items-center space-x-5">
                     <a
                         href="#work-experiences"
-                        className="text-white hover:text-red-500 transition-all duration-300"
+                        className="text-white  transition-all duration-300 hover:text-[#6881cb]"
                     >
                         Work Experience
                     </a>
                     <a
                         href="#projects"
-                        className="text-white hover:text-red-500 transition-all duration-300"
+                        className="text-white  transition-all duration-300 hover:text-[#6881cb]"
                     >
                         Projects
                     </a>
