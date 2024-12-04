@@ -5,15 +5,15 @@ const techSkills = [
     },
     {
         category: "Languages",
-        skills: ["JavaScript", "TypeScript","Node.js", "Go", "Python",  "PHP"],
+        skills: ["Python","JavaScript", "TypeScript","Node.js", "Go",   "PHP"],
     },
     {
         category: "Frameworks & Libraries",
         skills: [
+            "Django",
             "NestJS",
             "ExpressJS",
             "Laravel",
-            "Django"
         ],
     },
     {

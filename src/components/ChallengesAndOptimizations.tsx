@@ -64,7 +64,7 @@ const ChallengesAndOptimizations: FC = () => {
             mt-10
             mx-auto
             container
-            font-extrabold mb-10">
+            font-extrabold mb-2 ">
                 Top Challenges And Optimizations
             </p>
         </div>

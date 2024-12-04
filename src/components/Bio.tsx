@@ -122,7 +122,7 @@ const Bio: FC = () => {
   onInit={(typewriter) => {
     typewriter
       .typeString(`<p class="text-2xl  leading-loose">
-		I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I’ve been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices.
+		Experienced Backend Engineer with a strong focus on Python and Django for developing robust and scalable web applications. Proficient in designing RESTful APIs, integrating third-party services, and managing relational databases like PostgreSQL and MySQL. Adept at collaborating with cross-functional teams, optimizing codebases, and implementing best practices in software development. Enthusiastic about continuous learning and adopting new technologies to drive innovation.
 	</p>`)
       .start();
   }}

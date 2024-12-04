@@ -28,7 +28,7 @@ const Educations: FC = () => {
             mt-10
             mx-auto
             container  
-            font-extrabold mb-10">Education </p>
+            font-extrabold mb-2">Education </p>
         </div>
         <div className="
      w-full

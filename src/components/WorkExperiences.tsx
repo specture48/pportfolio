@@ -59,7 +59,7 @@ const workExperiences: IWorkExperience[] = [
     {
       company: "Flexsol",
       location: "",
-      title: "Fullstack Developer (Laravel / HTML / CSS / JS)",
+      title: "Fullstack Developer ",
       date: "Jan 2021 – Dec 2021",
       description: [
         "Designed and developed a comprehensive dashboard and API for a university library mobile app.",
