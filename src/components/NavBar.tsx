@@ -30,18 +30,18 @@ const NavBar: FC = () => {
 
                 {/* Right-side buttons */}
                 <div className="flex items-center space-x-5">
-                    <a
-                        href="#work-experiences"
-                        className="text-white  transition-all duration-300 hover:text-[#6881cb]"
-                    >
-                        Work Experience
-                    </a>
-                    <a
-                        href="#projects"
-                        className="text-white  transition-all duration-300 hover:text-[#6881cb]"
-                    >
-                        Projects
-                    </a>
+                    {/*<a*/}
+                    {/*    href="#work-experiences"*/}
+                    {/*    className="text-white  transition-all duration-300 hover:text-[#6881cb]"*/}
+                    {/*>*/}
+                    {/*    Work Experience*/}
+                    {/*</a>*/}
+                    {/*<a*/}
+                    {/*    href="#projects"*/}
+                    {/*    className="text-white  transition-all duration-300 hover:text-[#6881cb]"*/}
+                    {/*>*/}
+                    {/*    Projects*/}
+                    {/*</a>*/}
                     {/*<a*/}
                     {/*    href="#skills"*/}
                     {/*    className="text-white hover:text-red-500 transition-all duration-300"*/}
