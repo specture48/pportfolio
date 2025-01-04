@@ -6,7 +6,7 @@ import WorkExperience, { IWorkExperience } from "./WorkExperience";
 
 const workExperiences: IWorkExperience[] = [
     {
-      company: "MightyApps",
+      company: "Divcodes",
       location: "Beirut, Lebanon",
       title: "Backend Engineer",
       date: "May 2022 – Present",
