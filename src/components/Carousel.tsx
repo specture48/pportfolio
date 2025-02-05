@@ -19,7 +19,8 @@ const Carousel: FC<{ slides: string[] }> = ({slides}) => {
     };
 
     return (
-        <SlickSlider  {...settings}>
+        // @ts-ignore
+        <SlickSlider    {...settings}>
             {
                 slides.map((item) =>
                     (<div key={item} className="h-full mt-5">
