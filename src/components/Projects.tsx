@@ -18,7 +18,6 @@ export function getImage(path: string) {
 }
 
 const projects: IProject[] = [
-
     // {
     //     title: "Talkalize",
     //     link: "",
