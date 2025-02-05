@@ -1,7 +1,11 @@
 function Stackoverflow() {
 	return (
 
-<svg className="fill-current text-pumpkin"
+<svg
+
+	color="#6881cb"
+
+	className="fill-current text-pumpkin"
 
 		width="40px"
 			height="40px"

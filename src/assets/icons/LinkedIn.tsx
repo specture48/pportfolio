@@ -1,6 +1,8 @@
 function LinkedIn() {
 	return (
 		<svg
+			color="#6881cb"
+
 			className="fill-current text-pumpkin"
 			width="40px"
 			height="40px"

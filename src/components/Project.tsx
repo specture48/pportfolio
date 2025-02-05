@@ -15,13 +15,13 @@ const Project: FC<{ project: IProject }> = ({project}) => {
     const {link, title, images, description, stack} = project
     const [SliderModal, {open}] = useModal();
     return (<div
-        className='flex rounded-md hover:bg-[#6881cb] transition-all duration-1000 flex-col p-10 text-white 
-        border-[1px]   '>
+        className='flex rounded-md hover:bg-[#6881cb] transition-all duration-1000 flex-col p-10 text-white
+        border-[1px]'>
         <SliderModal className="">
             <Carousel slides={images}/>
         </SliderModal>
 
-        <div className="flex  h-full flex-col items-center justify-between my-auto  ">
+        <div className="flex h-full flex-col items-center justify-between my-auto  ">
             <div className="text-4xl font-extrabold leading-non mb-5">
                 {title}
             </div>

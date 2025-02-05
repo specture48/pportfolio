@@ -18,7 +18,23 @@ export function getImage(path: string) {
 }
 
 const projects: IProject[] = [
+
+    // {
+    //     title: "Talkalize",
+    //     link: "",
+    //     images: [],
+    //     stack: [],
+    //     description: "",
+    // },
+    // {
+    //     title: "Review System",
+    //     link: "",
+    //     images: [],
+    //     stack: ["django", "react"],
+    //     description: "",
+    // },
     {
+        title: "Ordro",
         link: "https://play.google.com/store/apps/details?id=com.ordro.retailapp&hl=en",
         images: [
             getImage("ordro/1.png"),
@@ -32,10 +48,17 @@ const projects: IProject[] = [
             getImage("ordro/9.png"),
         ],
         stack: ["express", "react", "flutter"],
-        title: "Ordro",
         description: "a comprehensive solution\nencompassing promotions, shipping, and stock management functionalities. The platform is designed to\nstreamline business-to-business transactions, providing a seamless experience for users involved in buying and\nselling products.",
     },
     {
+        title: "Ordro Point Of Sale System",
+        link: "",
+        images: [],
+        stack: ["express", "react", "flutter"],
+        description: "A Point of Sale system designed for retailers, seamlessly integrated with the Ordro ecosystem. It features real-time inventory tracking, multi-store management, sales analytics, and seamless payment processing to enhance retail operations.",
+    },
+    {
+        title: "Spantrek",
         link: "https://cloud.spantrek.com",
         images: [
             getImage("spantrek/19.png"),
@@ -61,7 +84,6 @@ const projects: IProject[] = [
             getImage("spantrek/20.png"),
         ],
         stack: ["nest", "graphql", "flutter", "react", "socketio"],
-        title: "Spantrek",
         description: "The platform boasted a rich set of features, including immersive 3D and 2D maps, real-\ntime reservation boards, visitor management, and dynamic digital signage.",
     },
     {
@@ -88,6 +110,17 @@ const projects: IProject[] = [
         description: "The Stay On application is an application of electronic courses in an academic and high-level manner, for\n professors and lecturers known in their field.",
     },
     {
+        title: "Albustan Store",
+        link: "",
+        images: [
+            getImage("albustan/1.png"),
+            getImage("albustan/2.png"),
+            getImage("albustan/3.png"),
+        ],
+        stack: ["express", "flutter"],
+        description: "A modern e-commerce platform for mobile phones, electronics, and accessories, offering secure payments, real-time inventory, and personalized shopping with advanced search, order tracking, and multi-vendor support.",
+    },
+    {
         title: "MemoNas Chat App",
         images: [
             getImage("memo/1.png"),
@@ -105,13 +138,11 @@ const projects: IProject[] = [
             getImage("ha55aExchange/3.png"),
             getImage("ha55aExchange/4.png"),
             getImage("ha55aExchange/5.png"),
-
         ],
         link: "https://ha55a.exchange",
         stack: ["laravel"],
         description: "Spearheaded the development of a secure and efficient Iraqi money\n exchange website using Laravel PHP. This project enabled users to conveniently exchange currency while\n      ensuring the utmost security.",
     },
-
     {
         title: "LPCenter",
         images: [
@@ -159,7 +190,6 @@ const projects: IProject[] = [
             getImage("vita/16.png"),
             getImage("vita/17.png"),
             getImage("vita/18.png"),
-
         ]
     },
     // {
@@ -185,9 +215,7 @@ const projects: IProject[] = [
     }
 ]
 
-
 //TODO mention that we use NX,SAAS Multi tenancy Structure
-
 export const iconMap = {
     // "nest": <NestjsLine color="white" size="75"/>,
     // "laravel": <LaravelLine color="white" size="75"/>,
@@ -210,8 +238,8 @@ const Projects: FC = () => {
         </div>
         <div className="
     grid
-    md:grid-cols-2
-    grid-cols-1
+    md:grid-cols-3
+    sm:grid-cols-1
     gap-5
     w-full
     mx-auto

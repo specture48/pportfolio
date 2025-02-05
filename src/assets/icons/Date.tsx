@@ -1,6 +1,9 @@
 function Date() {
 	return (
-		<svg width="40px" height="40px" viewBox="-0.5 0 15 15">
+		<svg
+			color="#6881cb"
+
+			width="40px" height="40px" viewBox="-0.5 0 15 15">
 			<path
 				className="fill-current text-pumpkin"
 				fill-rule="evenodd"

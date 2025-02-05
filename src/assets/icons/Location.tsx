@@ -1,6 +1,8 @@
 function Location() {
 	return (
 		<svg
+			color="#6881cb"
+
 			className="fill-current text-pumpkin"
 			height="40px"
 			width="40px"

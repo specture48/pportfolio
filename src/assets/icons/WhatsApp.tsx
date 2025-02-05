@@ -1,6 +1,9 @@
 function WhatsApp() {
 	return (
-		<svg width="40px" height="40px" viewBox="0 0 20 20" version="1.1">
+		<svg
+			color="#6881cb"
+
+			width="40px" height="40px" viewBox="0 0 20 20" version="1.1">
 			<g
 				id="Page-1"
 				stroke="none"
