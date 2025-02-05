@@ -18,13 +18,13 @@ export function getImage(path: string) {
 }
 
 const projects: IProject[] = [
-    // {
-    //     title: "Talkalize",
-    //     link: "",
-    //     images: [],
-    //     stack: [],
-    //     description: "",
-    // },
+    {
+        title: "Talkalize – Smart Automated Conversations on WhatsApp",
+        link: "https://www.talkalize.com/en",
+        images: [],
+        stack: ["laravel","react"],
+        description: "Talkalize is an AI-powered automated response system that enhances customer engagement on WhatsApp. It enables instant replies, seamless bookings, and personalized interactions. Businesses can improve brand awareness, drive sales, and foster customer loyalty by streamlining communication and re-engaging with prospects effectively.",
+    },
     // {
     //     title: "Review System",
     //     link: "",
