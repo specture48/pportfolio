@@ -18,15 +18,7 @@ export function getImage(path: string) {
 }
 
 const projects: IProject[] = [
-
-    // {
-    //     title: "Review System",
-    //     link: "",
-    //     images: [],
-    //     stack: ["django", "react"],
-    //     description: "",
-    // },
-    {
+        {
         title: "Ordro",
         link: "https://play.google.com/store/apps/details?id=com.ordro.retailapp&hl=en",
         images: [
@@ -191,6 +183,17 @@ const projects: IProject[] = [
             getImage("vita/17.png"),
             getImage("vita/18.png"),
         ]
+    },
+    {
+        title: "Review System",
+        link: "",
+        images: [
+            getImage("review-system/1.png"),
+            getImage("review-system/2.png"),
+            getImage("review-system/3.png"),
+        ],
+        stack: ["django", "react"],
+        description: "",
     },
     // {
     //     title: "Yamama Cement",

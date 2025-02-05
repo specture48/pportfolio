@@ -10,127 +10,134 @@ import Typewriter from 'typewriter-effect';
 
 
 const Bio: FC = () => {
+    const bioText = `
+        I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I’ve been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices.
+    `;
     return <div
         className="
-    w-full
-    min-h-[40vh]
-    mt-[50px]
-    mx-auto
-    container
-    text-white
-    items-center
-    justify-center
-    ">
+		w-full
+		min-h-[40vh]
+		mt-[50px]
+		mx-auto
+		container
+		text-white
+		items-center
+		justify-center
+		">
         <div>
-        <div className="text-[1.4rem] flex flex-col gap-2">
-							<div className="flex items-center gap-6">
-								<Email />
-								<a
-									href="mailto:daniel.f.kasem@gmail.com"
-									className="hover:underline"
-								>
-                                    daniel.f.kasem@gmail.com
-								</a>
-							</div>
-							<div className="flex items-center gap-6">
-								<Phone />
-								<a
-									href="tel:+963931869085"
-									className="hover:underline"
-								>
-									+963 931 869 085
-								</a>
-							</div>
-							<div className="flex items-center gap-6">
-								<WhatsApp />
-								<a
-									href="https://wa.me/+963931869085"
-									className="hover:underline"
-									target="_blank"
-								>
-									+963 931 869 085
-								</a>
-							</div>
-							<div className="flex items-center gap-6">
-								<Location />
-								<div>
+            <div className="text-[1.4rem] flex flex-col gap-2">
+                <div className="flex items-center gap-6">
+                    <Email/>
+                    <a
+                        href="mailto:daniel.f.kasem@gmail.com"
+                        className="hover:underline"
+                    >
+                        daniel.f.kasem@gmail.com
+                    </a>
+                </div>
+                <div className="flex items-center gap-6">
+                    <Phone/>
+                    <a
+                        href="tel:+963931869085"
+                        className="hover:underline"
+                    >
+                        +963 931 869 085
+                    </a>
+                </div>
+                <div className="flex items-center gap-6">
+                    <WhatsApp/>
+                    <a
+                        href="https://wa.me/+963931869085"
+                        className="hover:underline"
+                        target="_blank"
+                    >
+                        +963 931 869 085
+                    </a>
+                </div>
+                <div className="flex items-center gap-6">
+                    <Location/>
+                    <div>
+                        <a
+                            href="https://www.google.com/maps/place/Latakia,+Syria"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline"
+                        >
+                            Syria, Latakia
+                        </a>
+                        <span className="text-pumpkin text-[1.2rem] italic ml-2">
+											(Willing To Relocate)
+										</span>
+                    </div>
+                </div>
+                <div className="flex items-center gap-6">
+                    <Date/>
+                    <div>March 22th, 1999</div>
+                </div>
+                <div className="flex items-center gap-6">
+                    <LinkedIn/>
+                    <a
+                        href="https://www.linkedin.com/in/daniel-kasem-70bba9a4/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                    >
+                        /in/daniel-kasem
+                    </a>
+                </div>
+                <div className="flex items-center gap-6">
+                    <Stackoverflow/>
+                    <a
+                        href="https://stackoverflow.com/users/21441411/daniel-kasem"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                    >
+                        daniel-kasem
+                    </a>
+                </div>
+                {/* <div className="flex items-center gap-6">
+									<Codeforces />
 									<a
-										href="https://www.google.com/maps/place/Latakia,+Syria"
+										href="https://codeforces.com/profile/Nagham_Qarqamaz"
 										target="_blank"
 										rel="noopener noreferrer"
 										className="hover:underline"
 									>
-										Syria, Latakia
+										/profile/Nagham_Qarqamaz
 									</a>
-									<span className="text-pumpkin text-[1.2rem] italic ml-2">
-										(Willing To Relocate)
-									</span>
-								</div>
-							</div>
-							<div className="flex items-center gap-6">
-								<Date />
-								<div>March 22th, 1999</div>
-							</div>
-							<div className="flex items-center gap-6">
-								<LinkedIn />
-								<a
-									href="https://www.linkedin.com/in/daniel-kasem-70bba9a4/"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="hover:underline"
-								>
-									/in/daniel-kasem
-								</a>
-							</div>
-							<div className="flex items-center gap-6">
-								<Stackoverflow />
-								<a
-									href="https://stackoverflow.com/users/21441411/daniel-kasem"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="hover:underline"
-								>
-									daniel-kasem
-								</a>
-							</div>
-							{/* <div className="flex items-center gap-6">
-								<Codeforces />
-								<a
-									href="https://codeforces.com/profile/Nagham_Qarqamaz"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="hover:underline"
-								>
-									/profile/Nagham_Qarqamaz
-								</a>
-							</div> */}
-						</div>
+								</div> */}
+            </div>
         </div>
         <div className="mt-10">
-        {/* <p className="text-2xl  leading-loose"> */}
+            {/* <p className="text-2xl  leading-loose"> */}
             {/* I have four years of web development experience, specializing in backend technologies. For three years, I excelled in PHP, working with the Laravel framework. In the last two years, I transitioned to Node.js, specializing in Express and Nest.js. Proficient in MySQL and PostgresSQL, my approach emphasizes project success, and I am committed to staying current with industry trends */}
             {/* I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I’ve been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices. */}
-        {/* </p> */}
+            {/* </p> */}
 
+            <div className="hidden md:block">
 
-<Typewriter
-  options={{
-	cursor:"",
-    deleteSpeed: 30,  // Adjust this for deleting speed (if you use the delete functionality)
-    delay: 0,        // This is the delay before typing starts, you can lower this too
-  }}
-  onInit={(typewriter) => {
-    typewriter
-      .typeString(`<p class="text-2xl  leading-loose">
-		I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I’ve been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices.
-	</p>`)
-      .start();
-  }}
-/>
+                <Typewriter
+                    options={{
+                        cursor: "",
+                        deleteSpeed: 30,  // Adjust this for deleting speed (if you use the delete functionality)
+                        delay: 0,        // This is the delay before typing starts, you can lower this too
+                    }}
+                    onInit={(typewriter) => {
+                        typewriter
+                            .typeString(`<p class="text-2xl  leading-loose">
+			${bioText}
+		</p>`)
+                            .start();
+                    }}
+                />
+            </div>
+
+            <p className="block md:hidden text-2xl leading-loose">{bioText}</p>
+
         </div>
 
-		
-        
+
     </div>
 }
 export default Bio

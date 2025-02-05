@@ -14,6 +14,7 @@ export interface IProject {
 const Project: FC<{ project: IProject }> = ({project}) => {
     const {link, title, images, description, stack} = project
     const [SliderModal, {open}] = useModal();
+
     return (<div
         className='flex rounded-md hover:bg-[#6881cb] transition-all duration-1000 flex-col p-10 text-white
         border-[1px]'>
@@ -55,7 +56,6 @@ const Project: FC<{ project: IProject }> = ({project}) => {
                 {Boolean(project.link)
                     &&
                     (
-
                         <a className="w-[2 00px] rounded  text-white  p-2 mt-5" target="_blank" href={link}>Online</a>
                     )
                 }
