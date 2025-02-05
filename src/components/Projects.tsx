@@ -18,13 +18,7 @@ export function getImage(path: string) {
 }
 
 const projects: IProject[] = [
-    {
-        title: "Talkalize – Smart Automated Conversations on WhatsApp",
-        link: "https://www.talkalize.com/en",
-        images: [],
-        stack: ["laravel","react"],
-        description: "Talkalize is an AI-powered automated response system that enhances customer engagement on WhatsApp. It enables instant replies, seamless bookings, and personalized interactions. Businesses can improve brand awareness, drive sales, and foster customer loyalty by streamlining communication and re-engaging with prospects effectively.",
-    },
+
     // {
     //     title: "Review System",
     //     link: "",
@@ -96,6 +90,13 @@ const projects: IProject[] = [
         stack: ["laravel", "flutter"],
         link: "https://play.google.com/store/apps/details?id=com.divcodes.qahwahhouse&hl=en",
         description: "Qahwah House, an eCommerce platform dedicated to providing an exceptional coffee experience with premium organic coffee grown in Yemen.• Implemented features to enhance user experience and strea",
+    },
+    {
+        title: "Talkalize",
+        link: "https://www.talkalize.com/en",
+        images: [],
+        stack: ["laravel","react"],
+        description: "Talkalize is an AI-powered automated response system that enhances customer engagement on WhatsApp. It enables instant replies, seamless bookings, and personalized interactions. Businesses can improve brand awareness, drive sales, and foster customer loyalty by streamlining communication and re-engaging with prospects effectively.",
     },
     {
         title: "StayOn",
