@@ -184,17 +184,17 @@ const projects: IProject[] = [
             getImage("vita/18.png"),
         ]
     },
-    {
-        title: "Review System",
-        link: "",
-        images: [
-            getImage("review-system/1.png"),
-            getImage("review-system/2.png"),
-            getImage("review-system/3.png"),
-        ],
-        stack: ["django", "react"],
-        description: "",
-    },
+    // {
+    //     title: "Review System",
+    //     link: "",
+    //     images: [
+    //         getImage("review-system/1.png"),
+    //         getImage("review-system/2.png"),
+    //         getImage("review-system/3.png"),
+    //     ],
+    //     stack: ["django", "react"],
+    //     description: "",
+    // },
     // {
     //     title: "Yamama Cement",
     //     link: "",
