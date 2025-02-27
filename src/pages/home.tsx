@@ -6,7 +6,6 @@ import WorkExperiences from "../components/WorkExperiences.tsx";
 import ChallengesAndOptimizations from "../components/ChallengesAndOptimizations.tsx";
 import TechSkillsSection from "../components/TechSkill.tsx";
 import CertificatesSection from "../components/CertificatesSection.tsx";
-import Timeline from "../components/Timeline.tsx";
 
 function Home() {
     return (

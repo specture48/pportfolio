@@ -10,7 +10,6 @@ import {FC, useRef} from "react";
 // import {SiReact} from "@react-icons/all-files/si/SiReact";
 
 import Project, {IProject} from "./Project.tsx";
-import useIntersectionObserver from "../hooks/use-intersection-observer.ts";
 
 // import {REPO_PREFIX} from "../../vite.config.ts";
 

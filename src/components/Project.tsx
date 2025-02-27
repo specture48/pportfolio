@@ -2,7 +2,6 @@ import { FC } from "react";
 import useModal from "../hooks/useModal.tsx";
 import Carousel from "./Carousel.tsx";
 import { iconMap } from "./Projects.tsx";
-import Email from "../assets/icons/Email.tsx";
 
 export interface IProject {
     images: string[];
