@@ -13,11 +13,11 @@ const Bio: FC = () => {
     const bioText = `
         I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I’ve been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices.
     `;
-    return <div
+    return <section id="aboutme"><div
         className="
 		w-full
 		min-h-[40vh]
-		mt-[50px]
+		pt-[100px]
 		mx-auto
 		container
 		text-white
@@ -27,7 +27,9 @@ const Bio: FC = () => {
         <div>
             <div className="text-[1.4rem] flex flex-col gap-2">
                 <div className="flex items-center gap-6">
-                    <Email/>
+                    <div className="hidden md:block">
+                        <Email/>
+                    </div>
                     <a
                         href="mailto:daniel.f.kasem@gmail.com"
                         className="hover:underline"
@@ -139,5 +141,6 @@ const Bio: FC = () => {
 
 
     </div>
+    </section>
 }
 export default Bio

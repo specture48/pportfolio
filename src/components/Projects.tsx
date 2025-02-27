@@ -239,12 +239,13 @@ const Projects: FC = () => {
 
     return (
         <section id="projects" ref={projectsRef}
-        className="        container mx-auto"
+        className="  pt-[80px]     container mx-auto"
         >
-            <div className="">
+            <div className=" ">
                 <p
                     className="
-    text-8xl
+          text-4xl md:text-6xl lg:text-8xl
+
     w-full
     text-center
     font-extrabold

@@ -52,10 +52,12 @@ const techSkills = [
 
 const TechSkillsSection = () => {
     return (
-        <div className="py-8  container mx-auto ">
+        <section id="skills">
+        <div className="pt-[80px]  container mx-auto ">
             <p
                 className="
-    text-8xl
+          text-4xl md:text-6xl lg:text-8xl
+
     w-full
     text-center
     font-extrabold
@@ -92,6 +94,7 @@ const TechSkillsSection = () => {
                 ))}
             </div>
         </div>
+        </section>
     );
 };
 

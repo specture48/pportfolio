@@ -72,15 +72,12 @@ const workExperiences: IWorkExperience[] = [
 const WorkExperiences: FC = () => {
     return (
 
-        <section id="work-experiences">
-            <div>
-                <div className="
-                 mx-auto
-    container
-                ">
-                    <p
-                        className="
-    text-8xl
+        <section className="" id="work-experiences">
+            <div className="pt-[80px]">
+                <div className=" mx-auto container ">
+                    <p className="
+          text-4xl md:text-6xl lg:text-8xl
+
     w-full
     mt-10
     text-center
@@ -93,8 +90,7 @@ const WorkExperiences: FC = () => {
     border-navy-blue
     tracking-tight
     shadow-lg
-  "
-                    >
+  ">
                         Work Experience
                     </p>
                 </div>

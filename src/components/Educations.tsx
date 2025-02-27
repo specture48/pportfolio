@@ -25,12 +25,15 @@ const Educations: FC = () => {
 
     return (
         <section id="educations" ref={educationsRef}>
-            <div>
+            <div className="
+            pt-[80px]
+            ">
                 <div className="container mx-auto">
 
                     <p
                         className="
-    text-8xl
+          text-4xl md:text-6xl lg:text-8xl
+
     w-full
     mt-10
     text-center

@@ -3,11 +3,13 @@ import {FC} from "react";
 
 const CertificatesSection: FC = () => {
     return (
-        <section id="certificates" className="py-12 bg-black">
-            <div className="container mx-auto px-4">
+        <section id="certificates" className="bg-black">
+            <div className="container
+            pt-[80px]
+            mx-auto px-4">
                 <p
                     className="
-    text-8xl
+          text-4xl md:text-6xl lg:text-8xl
     w-full
     text-center
     font-extrabold

@@ -54,44 +54,39 @@ const challengesAndOptimizations: IChallengeAndOptimizationItem[] = [
     }
 ];
 
+
 const ChallengesAndOptimizations: FC = () => {
-    return (<div>
+    return (
+        <section id="challenges" className="bg-black py-12">
+            <div className="container mx-auto px-4">
+                {/* Heading */}
+                <h2 className="
+          text-4xl md:text-6xl lg:text-8xl
+          text-center
+          font-extrabold
+          text-navy-blue
+          mb-8
+          border-b-4
+          border-navy-blue
+          py-4
+          tracking-tight
+          shadow-lg
+        ">
+                    Top Challenges And Optimizations
+                </h2>
 
-        <div>
-            <p
-                className="
-    text-8xl
-    w-full
-    mt-10
-    text-center
-    font-extrabold
-    mb-10
-    text-navy-blue
-    bg-black
-    py-4
-    border-b-4
-    border-navy-blue
-    tracking-tight
-    shadow-lg
-  "
-            >
-                Top Challenges And Optimizations
-            </p>
+                {/* Challenges List */}
+                <div className="my-5 w-full mx-auto">
+                    {challengesAndOptimizations.map((p, index) => (
+                        <ChallengeAndOptimizationItem
+                            key={index}
+                            challengeAndOptimizationItem={p}
+                        />
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
 
-
-        </div>
-        <div className="
-        my-5
-        w-full
-        mx-auto
-        container
-    ">
-            {
-                challengesAndOptimizations.map((p, index) => {
-                    return (<ChallengeAndOptimizationItem key={index} challengeAndOptimizationItem={p}/>)
-                })
-            }
-        </div>
-    </div>)
-}
-export default ChallengesAndOptimizations
+export default ChallengesAndOptimizations;
