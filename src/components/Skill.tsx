@@ -14,6 +14,7 @@ const Skill: FC<{ skill: ISkill }> = ({skill}) => {
             </div>
             <div className="w-full h-full text-xl ">
                 <p>
+
                     {description}
                 </p>
             </div>

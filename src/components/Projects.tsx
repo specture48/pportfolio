@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC, useRef} from "react";
 // import {
 //     AndroidPlain, DotnetcorePlain,
 //     FlutterPlain, GraphqlPlain,
@@ -10,6 +10,7 @@ import {FC} from "react";
 // import {SiReact} from "@react-icons/all-files/si/SiReact";
 
 import Project, {IProject} from "./Project.tsx";
+import useIntersectionObserver from "../hooks/use-intersection-observer.ts";
 
 // import {REPO_PREFIX} from "../../vite.config.ts";
 
@@ -18,7 +19,7 @@ export function getImage(path: string) {
 }
 
 const projects: IProject[] = [
-        {
+    {
         title: "Ordro",
         link: "https://play.google.com/store/apps/details?id=com.ordro.retailapp&hl=en",
         images: [
@@ -87,7 +88,7 @@ const projects: IProject[] = [
         title: "Talkalize",
         link: "https://www.talkalize.com/en",
         images: [],
-        stack: ["laravel","react"],
+        stack: ["laravel", "react"],
         description: "Talkalize is an AI-powered automated response system that enhances customer engagement on WhatsApp. It enables instant replies, seamless bookings, and personalized interactions. Businesses can improve brand awareness, drive sales, and foster customer loyalty by streamlining communication and re-engaging with prospects effectively.",
     },
     {
@@ -209,13 +210,13 @@ const projects: IProject[] = [
     //     description: "non profit organization",
     //     images: []
     // },
-    {
-        title: "Prokoders CMS website",
-        link: "https://www.prokoders.com",
-        stack: [""],
-        description: "",
-        images: []
-    }
+    // {
+    //     title: "Prokoders CMS website",
+    //     link: "https://www.prokoders.com",
+    //     stack: [""],
+    //     description: "",
+    //     images: []
+    // }
 ]
 
 //TODO mention that we use NX,SAAS Multi tenancy Structure
@@ -233,27 +234,92 @@ export const iconMap = {
 }
 
 const Projects: FC = () => {
-    return (<section id="projects">
-        <div>
-            <p className="text-4xl  w-full
-    mx-auto
-    container  font-extrabold mb-10">Projects </p>
-        </div>
-        <div className="
-    grid
-    md:grid-cols-3
-    sm:grid-cols-1
-    gap-5
+
+    const projectsRef = useRef(null);
+    // const isVisible = useIntersectionObserver(projectsRef, {threshold: 0.1});
+
+    return (
+        <section id="projects" ref={projectsRef}
+        className="        container mx-auto"
+        >
+            <div className="">
+                <p
+                    className="
+    text-8xl
     w-full
-    mx-auto
-    container
-    ">
-            {
-                projects.map((p, index) => {
-                    return (<Project key={index} project={p}/>)
-                })
-            }
-        </div>
-    </section>)
+    text-center
+    font-extrabold
+    mb-10
+    text-navy-blue
+    bg-black
+    py-4
+    border-b-4
+    tracking-tight
+    shadow-lg
+  "
+                >
+                    Projects
+                </p>
+                {/*      <p*/}
+                {/*          className="*/}
+                {/*  text-8xl*/}
+                {/*  w-full*/}
+                {/*  text-center*/}
+                {/*  font-extrabold*/}
+                {/*  mb-10*/}
+                {/*"*/}
+                {/*      >*/}
+                {/*          Projects*/}
+                {/*      </p>*/}
+            </div>
+            <div
+                className="
+          grid
+          md:grid-cols-3
+          grid-cols-1
+          gap-5
+          w-full
+          mx-auto
+          container
+        "
+            >
+            {projects.map((p, index) => (
+                    <div
+                        // className={`${
+                        //     isVisible ? 'animate-fade-in' : 'opacity-0'
+                        // }`}
+                        key={index}
+                        // style={{animationDelay: `${index * 0.15}s`}}
+                    >
+
+                        <Project project={p}/>
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
+
+    // return (<section id="projects">
+    //     <div>
+    //         <p className="text-4xl  w-full
+    // mx-auto
+    // container  font-extrabold mb-10">Projects </p>
+    //     </div>
+    //     <div className="
+    // grid
+    // md:grid-cols-3
+    // sm:grid-cols-1
+    // gap-5
+    // w-full
+    // mx-auto
+    // container
+    // ">
+    //         {
+    //             projects.map((p, index) => {
+    //                 return (<Project key={index} project={p}/>)
+    //             })
+    //         }
+    //     </div>
+    // </section>)
 }
 export default Projects

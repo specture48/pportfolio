@@ -74,14 +74,29 @@ const WorkExperiences: FC = () => {
 
         <section id="work-experiences">
             <div>
-                <div>
-                    <p className="
-            text-4xl 
-            w-full
-            mt-10
-            mx-auto
-            container  
-            font-extrabold mb-10">Work Experience </p>
+                <div className="
+                 mx-auto
+    container
+                ">
+                    <p
+                        className="
+    text-8xl
+    w-full
+    mt-10
+    text-center
+    font-extrabold
+    mb-10
+    text-navy-blue
+    bg-black
+    py-4
+    border-b-4
+    border-navy-blue
+    tracking-tight
+    shadow-lg
+  "
+                    >
+                        Work Experience
+                    </p>
                 </div>
                 <div className="
         my-5

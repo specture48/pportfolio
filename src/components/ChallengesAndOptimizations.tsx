@@ -58,15 +58,27 @@ const ChallengesAndOptimizations: FC = () => {
     return (<div>
 
         <div>
-            <p className="
-            text-4xl
-            w-full
-            mt-10
-            mx-auto
-            container
-            font-extrabold mb-10">
+            <p
+                className="
+    text-8xl
+    w-full
+    mt-10
+    text-center
+    font-extrabold
+    mb-10
+    text-navy-blue
+    bg-black
+    py-4
+    border-b-4
+    border-navy-blue
+    tracking-tight
+    shadow-lg
+  "
+            >
                 Top Challenges And Optimizations
             </p>
+
+
         </div>
         <div className="
         my-5

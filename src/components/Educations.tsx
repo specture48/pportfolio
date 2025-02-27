@@ -1,6 +1,7 @@
-import {FC} from "react";
+import {FC, useRef} from "react";
 
-import Education, { IEducation } from "./Education.tsx";
+import Education, {IEducation} from "./Education.tsx";
+
 
 
 const educations: IEducation[] = [
@@ -14,33 +15,52 @@ const educations: IEducation[] = [
         title: "Bachelor of Informatics Engineering",
         date: "Sep 2016 - Dec 2021",
     },
-    
+
 ];
 
 
-//TODO mention that we use NX,SAAS Multi tenancy Structure
 const Educations: FC = () => {
-    return (<div>
-        <div>
-            <p className="
-            text-4xl 
+    const educationsRef = useRef<HTMLDivElement>(null);
+    // const isVisible = useIntersectionObserver(educationsRef, {threshold: 0.1});
+
+    return (
+        <section id="educations" ref={educationsRef}>
+            <div>
+                <div className="container mx-auto">
+
+                    <p
+                        className="
+    text-8xl
+    w-full
+    mt-10
+    text-center
+    font-extrabold
+    mb-10
+    text-navy-blue
+    bg-black
+    border-b-4
+    border-navy-blue
+    tracking-tight
+    shadow-lg
+  "
+                    >
+                        Education
+                    </p>
+                </div>
+                <div
+                    className="
             w-full
-            mt-10
             mx-auto
-            container  
-            font-extrabold mb-10">Education </p>
-        </div>
-        <div className="
-     w-full
- mx-auto
-    container
-    ">
-            {
-                educations.map((p, index) => {
-                    return (<Education key={index} education={p}/>)
-                })
-            }
-        </div>
-    </div>)
-}
-export default Educations
+            container
+          "
+                >
+                    {educations.map((p, index) => (
+                        <Education key={index} education={p}/>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Educations;

@@ -5,10 +5,11 @@ const NavBar: FC = () => {
         <div
             className="
         z-30
-        h-[100px]
+        h-[80px]
         shadow-xl
         fixed
         top-0
+        mb-[100px]
         w-full
         bg-[black]"
         >
@@ -37,6 +38,12 @@ const NavBar: FC = () => {
                     {/*    Work Experience*/}
                     {/*</a>*/}
                     {/*<a*/}
+                    {/*    href="#educations"*/}
+                    {/*    className="text-white  transition-all duration-300 hover:text-[#6881cb]"*/}
+                    {/*>*/}
+                    {/*    Education*/}
+                    {/*</a>*/}
+                    {/*<a*/}
                     {/*    href="#projects"*/}
                     {/*    className="text-white  transition-all duration-300 hover:text-[#6881cb]"*/}
                     {/*>*/}
@@ -44,7 +51,7 @@ const NavBar: FC = () => {
                     {/*</a>*/}
                     {/*<a*/}
                     {/*    href="#skills"*/}
-                    {/*    className="text-white hover:text-red-500 transition-all duration-300"*/}
+                    {/*    className="text-white hover:text-[#6881cb] transition-all duration-300"*/}
                     {/*>*/}
                     {/*    Skills*/}
                     {/*</a>*/}

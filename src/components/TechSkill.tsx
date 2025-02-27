@@ -53,7 +53,24 @@ const techSkills = [
 const TechSkillsSection = () => {
     return (
         <div className="py-8  container mx-auto ">
-            <h2 className="text-3xl font-bold mb-6  ">Tech Skills</h2>
+            <p
+                className="
+    text-8xl
+    w-full
+    text-center
+    font-extrabold
+    mb-10
+    text-navy-blue
+    bg-black
+    py-4
+    border-b-4
+    border-navy-blue
+    tracking-tight
+    shadow-lg
+  "
+            >
+                Tech Skills
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {techSkills.map((category, index) => (
                     <div

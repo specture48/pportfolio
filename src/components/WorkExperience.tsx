@@ -13,8 +13,7 @@ const WorkExperience: FC<{ workExperience: IWorkExperience }> = ({ workExperienc
   const { title, company, date, description } = workExperience;
   
   return (
-    <div className='my-2 flex rounded-md hover:bg-[#6881cb] transition-all duration-1000 flex-col py-10 px-2 text-white'>
-     
+    <div className='my-2 flex rounded-md hover:bg-[#6881cb] transition-all duration-1000 flex-col py-3 px-2 text-white'>
 
       <div className="flex">
       <div className="mr-2">
@@ -28,8 +27,6 @@ const WorkExperience: FC<{ workExperience: IWorkExperience }> = ({ workExperienc
         </div>
         <div className="ml-auto">{date}</div>
       </div>
-      
-    
 
       
     </div>
