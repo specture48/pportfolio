@@ -275,7 +275,7 @@ const Projects: FC = () => {
             <div
                 className="
           grid
-          md:grid-cols-3
+          lg:grid-cols-3
           grid-cols-1
           gap-5
           w-full

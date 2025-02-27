@@ -24,7 +24,7 @@ const NavBar: FC = () => {
 
                 {/* Hamburger Menu for Mobile */}
                 <button
-                    className="md:hidden text-white focus:outline-none"
+                    className="md:hidden text-white focus:outline-none "
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,7 +51,7 @@ const NavBar: FC = () => {
                     <a
                         href="cv.pdf"
                         download="Daniel-CV.pdf"
-                        className="border border-white text-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition-all duration-300 inline-flex items-center"
+                        className="border border-white text-white px-4 py-2 rounded-lg hover:bg-white hover:text-[black]  transition-all duration-300 inline-flex items-center"
                     >
                         <span>Download CV</span>
                     </a>
