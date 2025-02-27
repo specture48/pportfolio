@@ -14,7 +14,7 @@ const NavBar: FC = () => {
     ];
 
     return (
-        <div className="z-30 h-[80px] shadow-xl fixed top-0 w-full bg-black">
+        <div className="z-30 h-[80px]  shadow-xl backdrop-blur-lg fixed top-0 w-full bg-black ">
             <div className="flex justify-between h-full items-center container mx-auto px-5">
                 {/* Logo / Name */}
                 {/*<div className="items-center flex h-full justify-center">*/}
@@ -60,13 +60,13 @@ const NavBar: FC = () => {
 
             {/* Mobile Dropdown */}
             {isOpen && (
-                <div className="md:hidden bg-black w-full absolute top-[60px] left-[0] shadow-xl">
+                <div className="md:hidden bg-navy-blue   absolute top-[60px] left-[50px] backdrop-blur shadow-xl">
                     <div className="flex flex-col items-center py-4 space-y-4">
                         {navItems.map((item) => (
                             <a
                                 key={item.href}
                                 href={item.href}
-                                className="text-white hover:text-[#6881cb] transition-all duration-300"
+                                className="text-white  border-white py-2 px-4  rounded-lg hover:text-[#6881cb]  transition-all duration-300"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {item.label}
