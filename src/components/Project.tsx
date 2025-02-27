@@ -42,43 +42,41 @@ const Project: FC<{ project: IProject }> = ({project}) => {
                 <div className="flex justify-center gap-4 mt-5 px-5 items-center">
                     {Boolean(project.images.length) && (
                         <button
-                            className="w-[200px] border  rounded text-white p-2"
+                            className="w-[200px] rounded text-white p-2 flex items-center justify-center  md:border-[#6881cb]"
                             onClick={open}
                             title="show screenshots"
                         >
-                            {/*<svg*/}
-                            {/*    className=" w-16 h-16 animate-spin-slow fill-current text-[#6881cb] hover:text-[#0077b5] transition-colors duration-300"*/}
-                            {/*    xmlns="http://www.w3.org/2000/svg"*/}
-                            {/*    viewBox="0 0 24 24"*/}
-                            {/*    fill="none"*/}
-                            {/*    stroke="currentColor"*/}
-                            {/*>*/}
-                            {/*    <path*/}
-                            {/*        strokeLinecap="round"*/}
-                            {/*        strokeLinejoin="round"*/}
-                            {/*        strokeWidth={2}*/}
-                            {/*        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"*/}
-                            {/*    />*/}
-                            {/*</svg>*/}
-                            Screenshots
+                            <svg
+                                className="w-8 h-8 md:w-12 md:h-12 animate-spin-slow text-[#6881cb] hover:text-[#0077b5] transition-colors duration-300"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                />
+                            </svg>
+                            <span className="ml-2 text-navy-blue">Screenshots</span>
                         </button>
                     )}
 
                     {Boolean(project.link) && (
                         <a
-                            className="w-[200px] rounded text-white p-2 flex items-center justify-center"
+                            className="md:w-[200px] rounded text-white p-2 flex items-center justify-center"
                             target="_blank"
                             href={link}
                             title="open website"
                         >
-                            {/* Animated SVG Globe */}
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
+                                className="w-8 h-8 animate-spin-slow text-[#6881cb] hover:text-[#0077b5] transition-colors duration-300"
                                 fill="none"
                                 stroke="currentColor"
-                                color="navy-blue"
-                                className=" w-8 h-8 animate-spin-slow fill-current text-[#6881cb] hover:text-[#0077b5] transition-colors duration-300"
                             >
                                 <path
                                     strokeLinecap="round"
