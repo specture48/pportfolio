@@ -138,8 +138,6 @@ const Bio: FC = () => {
             <p className="block md:hidden text-2xl leading-loose">{bioText}</p>
 
         </div>
-
-
     </div>
     </section>
 }

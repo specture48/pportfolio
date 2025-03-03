@@ -103,7 +103,7 @@ const projects: IProject[] = [
     },
     {
         title: "Albustan Store",
-        link: "",
+        link: "https://play.google.com/store/apps/details?id=com.cleancody.albustan&hl=en",
         images: [
             getImage("albustan/1.png"),
             getImage("albustan/2.png"),
