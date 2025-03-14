@@ -1,4 +1,4 @@
-import CertificateCard, {Certificate, certificates} from "./Certificate.tsx";
+import CertificateCard, {ICertificate, certificates} from "./ICertificate.tsx";
 import {FC} from "react";
 
 const CertificatesSection: FC = () => {
@@ -26,7 +26,7 @@ const CertificatesSection: FC = () => {
                     Certificates
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {certificates.map((certificate: Certificate) => (
+                    {certificates.map((certificate: ICertificate) => (
                         <CertificateCard key={certificate.id} certificate={certificate}/>
                     ))}
                 </div>

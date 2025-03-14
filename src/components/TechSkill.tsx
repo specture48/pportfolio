@@ -1,6 +1,6 @@
 import {ReactNode} from "react";
 
-const techSkills = [
+export const techSkillsData = [
     {
         category: "Databases",
         skills: ["MongoDB", "PostgreSQL", "MySQL", "RDS", "REDIS"],
@@ -97,7 +97,7 @@ const TechSkillsSection = () => {
 
                 {/* Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {techSkills.map((category, index) => (
+                    {techSkillsData.map((category, index) => (
                         <div
                             key={index}
                             className="group bg-gray-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20"

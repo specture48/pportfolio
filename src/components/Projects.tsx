@@ -17,7 +17,7 @@ export function getImage(path: string) {
     return path
 }
 
-const projects: IProject[] = [
+export const projectsData: IProject[] = [
     {
         title: "Ordro",
         link: "https://play.google.com/store/apps/details?id=com.ordro.retailapp&hl=en",
@@ -239,7 +239,7 @@ const Projects: FC = () => {
 
     return (
         <section id="projects" ref={projectsRef}
-        className="  pt-[80px]     container mx-auto"
+                 className="  pt-[80px]     container mx-auto"
         >
             <div className=" ">
                 <p
@@ -260,17 +260,7 @@ const Projects: FC = () => {
                 >
                     Projects
                 </p>
-                {/*      <p*/}
-                {/*          className="*/}
-                {/*  text-8xl*/}
-                {/*  w-full*/}
-                {/*  text-center*/}
-                {/*  font-extrabold*/}
-                {/*  mb-10*/}
-                {/*"*/}
-                {/*      >*/}
-                {/*          Projects*/}
-                {/*      </p>*/}
+
             </div>
             <div
                 className="
@@ -283,7 +273,7 @@ const Projects: FC = () => {
           container
         "
             >
-            {projects.map((p, index) => (
+                {projectsData.map((p, index) => (
                     <div
                         // className={`${
                         //     isVisible ? 'animate-fade-in' : 'opacity-0'

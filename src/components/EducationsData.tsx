@@ -1,10 +1,11 @@
 import {FC, useRef} from "react";
 
 import Education, {IEducation} from "./Education.tsx";
+import {getImage} from "./Projects.tsx";
 
 
 
-const educations: IEducation[] = [
+export const educationsData: IEducation[] = [
     {
         institution: "Syrian Virtual University",
         title: "Master's in Web Science",
@@ -14,6 +15,7 @@ const educations: IEducation[] = [
         institution: "Tishreen University",
         title: "Bachelor of Informatics Engineering",
         date: "Sep 2016 - Dec 2021",
+        certificateImage:getImage("certificates/graduation.jpeg")
     },
 
 ];
@@ -57,7 +59,7 @@ const Educations: FC = () => {
             container
           "
                 >
-                    {educations.map((p, index) => (
+                    {educationsData.map((p, index) => (
                         <Education key={index} education={p}/>
                     ))}
                 </div>

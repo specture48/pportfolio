@@ -2,9 +2,9 @@ import {FC} from "react";
 import WorkExperience, {IWorkExperience} from "./WorkExperience";
 
 
-const workExperiences: IWorkExperience[] = [
+export const workExperiencesData: IWorkExperience[] = [
     {
-        company: "Divcodes",
+        company: "CogentSoft",
         location: "Beirut, Lebanon",
         title: "Backend Engineer",
         date: "May 2022 – Present",
@@ -101,7 +101,7 @@ const WorkExperiences: FC = () => {
     container
     ">
                     {
-                        workExperiences.map((p, index) => {
+                        workExperiencesData.map((p, index) => {
                             return (<WorkExperience key={index} workExperience={p}/>)
                         })
                     }

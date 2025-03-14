@@ -1,7 +1,7 @@
 import React from 'react';
 import {getImage} from "./Projects.tsx";
 
-export interface Certificate {
+export interface ICertificate {
     id: number;
     title: string;
     issuer: string;
@@ -10,7 +10,7 @@ export interface Certificate {
     link: string; // URL to view/download the certificate
 }
 
-export const certificates: Certificate[] = [
+export const certificates: ICertificate[] = [
     {
         id: 1,
         title: 'AWS Cloud Technical Essentials',
@@ -43,6 +43,15 @@ export const certificates: Certificate[] = [
         imageUrl: getImage("certificates/intro-to-agile-development-and-scrum.jpeg"),
         link: 'https://www.coursera.org/account/accomplishments/verify/6XM22UN91CH2'
     },
+
+    {
+        id: 6,
+        title: 'Prokoders Certificate',
+        issuer: 'Prokoders',
+        date: 'March 2022',
+        imageUrl: getImage("certificates/prokoders.jpg"),
+        link: ''
+    },
     {
         id: 5,
         title: 'IELTS Writing Section Skills Mastery',
@@ -51,19 +60,11 @@ export const certificates: Certificate[] = [
         imageUrl: getImage("certificates/ielts-writing-section-skills-mastery.jpeg"),
         link: 'https://www.coursera.org/account/accomplishments/verify/7WMZFRXJR5L1'
     },
-    {
-        id: 6,
-        title: 'Prokoders Certificate',
-        issuer: 'Prokoders',
-        date: 'March 2023',
-        imageUrl: getImage("certificates/prokoders.jpg"),
-        link: ''
-    },
 ];
 
 
 interface CertificateCardProps {
-    certificate: Certificate;
+    certificate: ICertificate;
 }
 
 const CertificateCard: React.FC<CertificateCardProps> = ({certificate}) => {
