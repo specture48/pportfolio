@@ -17,7 +17,7 @@ const Project: FC<{ project: IProject }> = ({project}) => {
 
     return (
         <div
-            className="flex rounded-md hover:bg-[#6881cb] transition-all duration-1000 flex-col p-10 text-white border-[1px] h-full">
+            className="flex rounded-md transition-all duration-1000 flex-col p-10 text-white border-[1px] h-full">
             <SliderModal className="">
                 <Carousel slides={images}/>
             </SliderModal>

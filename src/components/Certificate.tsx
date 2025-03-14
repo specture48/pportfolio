@@ -29,13 +29,38 @@ export const certificates: Certificate[] = [
     },
     {
         id: 3,
-        title: 'Prokoders Certificate', // Update this title if you have a specific one
-        issuer: 'Prokoders', // Update the issuer if needed
-        date: 'Mar 2023', // Update the date if needed
+        title: 'Introduction to MongoDB',
+        issuer: 'MongoDB Inc.',
+        date: 'March 11, 2025',
+        imageUrl: getImage("certificates/mongodb-intro.jpeg"),
+        link: ''
+    },
+    {
+        id: 4,
+        title: 'Introduction to Agile Development and Scrum',
+        issuer: 'IBM',
+        date: 'March 11, 2025',
+        imageUrl: getImage("certificates/intro-to-agile-development-and-scrum.jpeg"),
+        link: ''
+    },
+    {
+        id: 5,
+        title: 'IELTS Writing Section Skills Mastery',
+        issuer: 'University of California, Irvine',
+        date: 'March 10, 2025',
+        imageUrl: getImage("certificates/ielts-writing-section-skills-mastery.jpeg"),
+        link: ''
+    },
+    {
+        id: 6,
+        title: 'Prokoders Certificate',
+        issuer: 'Prokoders',
+        date: 'March 2023',
         imageUrl: getImage("certificates/prokoders.jpg"),
-        link:""
+        link: ''
     },
 ];
+
 
 interface CertificateCardProps {
     certificate: Certificate;
