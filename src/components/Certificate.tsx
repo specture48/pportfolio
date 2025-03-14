@@ -33,7 +33,7 @@ export const certificates: Certificate[] = [
         issuer: 'MongoDB Inc.',
         date: 'March 11, 2025',
         imageUrl: getImage("certificates/mongodb-intro.jpeg"),
-        link: ''
+        link: 'https://www.coursera.org/account/accomplishments/verify/I83NW1UK5NMU'
     },
     {
         id: 4,
@@ -41,7 +41,7 @@ export const certificates: Certificate[] = [
         issuer: 'IBM',
         date: 'March 11, 2025',
         imageUrl: getImage("certificates/intro-to-agile-development-and-scrum.jpeg"),
-        link: ''
+        link: 'https://www.coursera.org/account/accomplishments/verify/6XM22UN91CH2'
     },
     {
         id: 5,
@@ -49,7 +49,7 @@ export const certificates: Certificate[] = [
         issuer: 'University of California, Irvine',
         date: 'March 10, 2025',
         imageUrl: getImage("certificates/ielts-writing-section-skills-mastery.jpeg"),
-        link: ''
+        link: 'https://www.coursera.org/account/accomplishments/verify/7WMZFRXJR5L1'
     },
     {
         id: 6,
