@@ -6,139 +6,129 @@ import LinkedIn from "../assets/icons/LinkedIn";
 import Location from "../assets/icons/Location";
 import Date from "../assets/icons/Date";
 import Stackoverflow from "../assets/icons/StackOverFlow";
-import Typewriter from 'typewriter-effect';
-
+import Typewriter from "typewriter-effect";
 
 const Bio: FC = () => {
     const bioText = `
         I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I’ve been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices.
     `;
-    return <section id="aboutme"><div
-        className="
-		w-full
-		min-h-[40vh]
-		pt-[100px]
-		mx-auto
-		container
-		text-white
-		items-center
-		justify-center
-		">
-        <div>
-            <div className="text-[1.4rem] flex flex-col gap-2">
-                <div className="flex items-center gap-6">
-                    <div className="hidden md:block">
-                        <Email/>
-                    </div>
+
+    const contactItems = [
+        {
+            icon: <Email />,
+            text: "daniel.f.kasem@gmail.com",
+            href: "mailto:daniel.f.kasem@gmail.com",
+        },
+        {
+            icon: <Phone />,
+            text: "+963 931 869 085",
+            href: "tel:+963931869085",
+        },
+        {
+            icon: <WhatsApp />,
+            text: "+963 931 869 085",
+            href: "https://wa.me/+963931869085",
+            target: "_blank",
+        },
+        {
+            icon: <Location />,
+            text: (
+                <>
                     <a
-                        href="mailto:daniel.f.kasem@gmail.com"
-                        className="hover:underline"
-                    >
-                        daniel.f.kasem@gmail.com
-                    </a>
-                </div>
-                <div className="flex items-center gap-6">
-                    <Phone/>
-                    <a
-                        href="tel:+963931869085"
-                        className="hover:underline"
-                    >
-                        +963 931 869 085
-                    </a>
-                </div>
-                <div className="flex items-center gap-6">
-                    <WhatsApp/>
-                    <a
-                        href="https://wa.me/+963931869085"
-                        className="hover:underline"
-                        target="_blank"
-                    >
-                        +963 931 869 085
-                    </a>
-                </div>
-                <div className="flex items-center gap-6">
-                    <Location/>
-                    <div>
-                        <a
-                            href="https://www.google.com/maps/place/Latakia,+Syria"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:underline"
-                        >
-                            Syria, Latakia
-                        </a>
-                        <span className="text-pumpkin text-[1.2rem] italic ml-2">
-											(Willing To Relocate)
-										</span>
-                    </div>
-                </div>
-                <div className="flex items-center gap-6">
-                    <Date/>
-                    <div>March 22th, 1999</div>
-                </div>
-                <div className="flex items-center gap-6">
-                    <LinkedIn/>
-                    <a
-                        href="https://www.linkedin.com/in/daniel-kasem-70bba9a4/"
+                        href="https://www.google.com/maps/place/Latakia,+Syria"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:underline"
                     >
-                        /in/daniel-kasem
+                        Syria, Latakia
                     </a>
+                    <span className="text-cyan-400 text-sm italic ml-2">(Willing To Relocate)</span>
+                </>
+            ),
+        },
+        {
+            icon: <Date />,
+            text: "March 22th, 1999",
+        },
+        {
+            icon: <LinkedIn />,
+            text: "/in/daniel-kasem",
+            href: "https://www.linkedin.com/in/daniel-kasem-70bba9a4/",
+            target: "_blank",
+        },
+        {
+            icon: <Stackoverflow />,
+            text: "daniel-kasem",
+            href: "https://stackoverflow.com/users/21441411/daniel-kasem",
+            target: "_blank",
+        },
+    ];
+
+    return (
+        <section id="aboutme" className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
+            <div className="container mx-auto px-4">
+                {/* Section Title */}
+                <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600">
+                    About Me
+                </h2>
+
+                <div className="flex flex-col lg:flex-row gap-12">
+                    {/* Contact Info */}
+                    <div className="lg:w-1/3">
+                        <div
+                            className="bg-gray-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl border border-gray-700">
+                            <h3 className="text-2xl font-semibold text-cyan-400 mb-6 text-center">Contact</h3>
+                            <div className="space-y-4">
+                                {contactItems.map((item, index) => (
+                                    <div key={index} className="flex items-center gap-4 group">
+                                        <span
+                                            className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                                            {item.icon}
+                                        </span>
+                                        {item.href ? (
+                                            <a
+                                                href={item.href}
+                                                target={item.target || "_self"}
+                                                rel={item.target ? "noopener noreferrer" : undefined}
+                                                className="text-gray-300 group-hover:text-white transition-colors duration-300"
+                                            >
+                                                {item.text}
+                                            </a>
+                                        ) : (
+                                            <span className="text-gray-300">{item.text}</span>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Bio Text */}
+                    <div className="lg:w-2/3">
+                        <div className="bg-gray-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl  border-gray-700">
+                            <div className="hidden md:block">
+                                <Typewriter
+                                    options={{
+                                        cursor: "_",
+                                        delay: 20, // Faster typing speed
+                                        deleteSpeed: 30,
+                                    }}
+                                    onInit={(typewriter) => {
+                                        typewriter
+                                            .typeString(
+                                                `<p class="text-lg md:text-2xl space-y-10 leading-relaxed text-gray-300">${bioText}</p>`
+                                            )
+                                            .start();
+                                    }}
+                                />
+                            </div>
+                            <p className="block md:hidden text-lg leading-relaxed text-gray-300">{bioText}</p>
+                        </div>
+                    </div>
                 </div>
-                <div className="flex items-center gap-6">
-                    <Stackoverflow/>
-                    <a
-                        href="https://stackoverflow.com/users/21441411/daniel-kasem"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline"
-                    >
-                        daniel-kasem
-                    </a>
-                </div>
-                {/* <div className="flex items-center gap-6">
-									<Codeforces />
-									<a
-										href="https://codeforces.com/profile/Nagham_Qarqamaz"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="hover:underline"
-									>
-										/profile/Nagham_Qarqamaz
-									</a>
-								</div> */}
             </div>
-        </div>
-        <div className="mt-10">
-            {/* <p className="text-2xl  leading-loose"> */}
-            {/* I have four years of web development experience, specializing in backend technologies. For three years, I excelled in PHP, working with the Laravel framework. In the last two years, I transitioned to Node.js, specializing in Express and Nest.js. Proficient in MySQL and PostgresSQL, my approach emphasizes project success, and I am committed to staying current with industry trends */}
-            {/* I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I’ve been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices. */}
-            {/* </p> */}
+        </section>
+    );
+};
 
-            <div className="hidden md:block">
-
-                <Typewriter
-                    options={{
-                        cursor: "",
-                        deleteSpeed: 30,  // Adjust this for deleting speed (if you use the delete functionality)
-                        delay: 0,        // This is the delay before typing starts, you can lower this too
-                    }}
-                    onInit={(typewriter) => {
-                        typewriter
-                            .typeString(`<p class="text-2xl  leading-loose">
-			${bioText}
-		</p>`)
-                            .start();
-                    }}
-                />
-            </div>
-
-            <p className="block md:hidden text-2xl leading-loose">{bioText}</p>
-
-        </div>
-    </div>
-    </section>
-}
-export default Bio
+export default Bio;
