@@ -9,6 +9,7 @@ import {workExperiencesData} from "./WorkExperiences.tsx";
 import {techSkillsData} from "./TechSkill.tsx";
 
 import ReactMarkdown from "react-markdown";
+import {bioText} from "./Bio.tsx";
 
 export interface SkillCategory {
     category: string;
@@ -23,8 +24,10 @@ interface PortfolioData {
     skills: SkillCategory[];
 }
 
+//TODO add contacts,links,bio,cv link
 const jsonToPortfolioString = (data: PortfolioData): string => {
     const {certificates, projects, skills, educations, workExperiences} = data;
+
 
     const certificatesStr = certificates.length
         ? `Certificates: ${certificates
@@ -66,7 +69,12 @@ const jsonToPortfolioString = (data: PortfolioData): string => {
             .join("; ")}.`
         : "Work Experience: None.";
 
-    return `${certificatesStr}\n${projectsStr}\n${skillsStr}\n${educationsStr}\n${workExperiencesStr}`;
+    return `phone:+963931869085\n
+    email:daniel.f.kasem@gmail.com\n
+    links:${[
+        'https://www.linkedin.com/in/daniel-kasem-70bba9a4/',
+        'https://stackoverflow.com/users/21441411/daniel-kasem',
+    ].join(',')}\nBIO:${bioText}\n${certificatesStr}\n${projectsStr}\n${skillsStr}\n${educationsStr}\n${workExperiencesStr}`;
 };
 
 const AIChat: FC = () => {
@@ -97,7 +105,7 @@ const AIChat: FC = () => {
         const prompt = `
             ${portfolioData}
 
-            A recruiter will ask you a question based on this information. Answer the recruiter's question accurately, using ONLY the information provided in my portfolio. DO NOT generate any information outside of the portfolio data. Keep your answer concise and limit it to a maximum of 250 words. Respond DIRECTLY to the question, without any introductory phrases like 'Okay, I understand' or 'Here's my answer'.
+            A recruiter will ask you a question based on this information. Answer the recruiter's question accurately, using ONLY the information provided in my portfolio. DO NOT generate any information outside of the portfolio data. Keep your answer concise and limit it to a maximum of 250 words. Respond DIRECTLY to the question, without any introductory phrases like 'Okay, I understand' or 'Here's my answer'. Format your response using markdown to make it usable by react-markdown, including bullet points, headings, and code blocks where appropriate
 
             Recruiter's Question: ${question}
         `;
@@ -241,7 +249,7 @@ const AIChat: FC = () => {
                                 className="
                                     flex-1
                                     bg-gray-600
-                                    text-white
+                                    text-[black]
                                     p-3 sm:p-4
                                     rounded-lg sm:rounded-xl
                                     border border-navy-blue
