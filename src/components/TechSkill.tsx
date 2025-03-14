@@ -71,9 +71,29 @@ const TechSkillsSection = () => {
         <section id="skills" className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
             <div className="container mx-auto px-4">
                 {/* Section Title */}
-                <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600">
-                    Tech Skills
-                </h2>
+
+                <div className="container mx-auto">
+
+                    <p
+                        className="
+          text-4xl md:text-6xl lg:text-8xl
+
+    w-full
+    mt-10
+    text-center
+    font-extrabold
+    mb-10
+    text-navy-blue
+    bg-black
+    border-b-4
+    border-navy-blue
+    tracking-tight
+    shadow-lg
+  "
+                    >
+                        Tech Skills
+                    </p>
+                </div>
 
                 {/* Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -97,7 +117,7 @@ const TechSkillsSection = () => {
                                         key={idx}
                                         className="flex items-center text-lg md:text-xl group-hover:text-white transition-colors duration-300"
                                     >
-                                        <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
+                                        <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"/>
                                         {skill}
                                     </li>
                                 ))}

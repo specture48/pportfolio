@@ -15,23 +15,23 @@ const Bio: FC = () => {
 
     const contactItems = [
         {
-            icon: <Email />,
+            icon: <Email/>,
             text: "daniel.f.kasem@gmail.com",
             href: "mailto:daniel.f.kasem@gmail.com",
         },
         {
-            icon: <Phone />,
+            icon: <Phone/>,
             text: "+963 931 869 085",
             href: "tel:+963931869085",
         },
         {
-            icon: <WhatsApp />,
+            icon: <WhatsApp/>,
             text: "+963 931 869 085",
             href: "https://wa.me/+963931869085",
             target: "_blank",
         },
         {
-            icon: <Location />,
+            icon: <Location/>,
             text: (
                 <>
                     <a
@@ -47,17 +47,17 @@ const Bio: FC = () => {
             ),
         },
         {
-            icon: <Date />,
+            icon: <Date/>,
             text: "March 22th, 1999",
         },
         {
-            icon: <LinkedIn />,
+            icon: <LinkedIn/>,
             text: "/in/daniel-kasem",
             href: "https://www.linkedin.com/in/daniel-kasem-70bba9a4/",
             target: "_blank",
         },
         {
-            icon: <Stackoverflow />,
+            icon: <Stackoverflow/>,
             text: "daniel-kasem",
             href: "https://stackoverflow.com/users/21441411/daniel-kasem",
             target: "_blank",
@@ -68,15 +68,35 @@ const Bio: FC = () => {
         <section id="aboutme" className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
             <div className="container mx-auto px-4">
                 {/* Section Title */}
-                <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600">
-                    About Me
-                </h2>
+
+                <div className="container mx-auto">
+
+                    <p
+                        className="
+          text-4xl md:text-6xl lg:text-8xl
+
+    w-full
+    mt-10
+    text-center
+    font-extrabold
+    mb-10
+    text-navy-blue
+    bg-black
+    border-b-4
+    border-navy-blue
+    tracking-tight
+    shadow-lg
+  "
+                    >
+                        About me
+                    </p>
+                </div>
 
                 <div className="flex flex-col lg:flex-row gap-12">
                     {/* Contact Info */}
                     <div className="lg:w-1/3">
                         <div
-                            className="bg-gray-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl border border-gray-700">
+                            className="bg-gray-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl md:border border-gray-700">
                             <h3 className="text-2xl font-semibold text-cyan-400 mb-6 text-center">Contact</h3>
                             <div className="space-y-4">
                                 {contactItems.map((item, index) => (

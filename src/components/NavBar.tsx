@@ -60,13 +60,13 @@ const NavBar: FC = () => {
 
             {/* Mobile Dropdown */}
             {isOpen && (
-                <div className="md:hidden bg-navy-blue   absolute top-[60px] left-[50px] backdrop-blur shadow-xl">
-                    <div className="flex flex-col items-center py-4 space-y-4">
+                <div className="md:hidden bg-navy-blue bg-opacity-95 absolute top-[60px] left-0 w-full shadow-xl backdrop-blur-lg border-t border-black z-50">
+                    <div className="flex flex-col items-center py-6 space-y-6">
                         {navItems.map((item) => (
                             <a
                                 key={item.href}
                                 href={item.href}
-                                className="text-white  border-white py-2 px-4  rounded-lg hover:text-[#6881cb]  transition-all duration-300"
+                                className="text-white text-lg font-medium bg-black bg-opacity-20 px-6 py-3 rounded-xl hover:bg-opacity-40 hover:text-[#6881cb] transition-all duration-300 ease-in-out transform hover:scale-105 w-3/4 text-center"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {item.label}
@@ -75,7 +75,7 @@ const NavBar: FC = () => {
                         <a
                             href="cv.pdf"
                             download="Daniel-CV.pdf"
-                            className="border border-white text-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition-all duration-300 inline-flex items-center"
+                            className="text-white text-lg font-medium bg-black px-6 py-3 rounded-xl hover:bg-white hover:text-navy-blue transition-all duration-300 ease-in-out transform hover:scale-105 inline-flex items-center justify-center w-3/4 border border-black"
                             onClick={() => setIsOpen(false)}
                         >
                             <span>Download CV</span>
