@@ -7,7 +7,6 @@ import {educationsData} from "./EducationsData.tsx";
 import {projectsData} from "./Projects.tsx";
 import {workExperiencesData} from "./WorkExperiences.tsx";
 import {techSkillsData} from "./TechSkill.tsx";
-
 import ReactMarkdown from "react-markdown";
 import {bioText} from "./Bio.tsx";
 
@@ -24,7 +23,7 @@ interface PortfolioData {
     skills: SkillCategory[];
 }
 
-//TODO add contacts,links,bio,cv link
+//TODO add location,cv link
 const jsonToPortfolioString = (data: PortfolioData): string => {
     const {certificates, projects, skills, educations, workExperiences} = data;
 
@@ -94,6 +93,10 @@ const AIChat: FC = () => {
     // Replace with your actual Gemini API key
     const API_KEY = "AIzaSyCKRVn92ORlYJYWY8somJsAma3WLXQMBwc";
     const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
+    const TELEGRAM_BOT_TOKEN = "7636512900:AAHhTpTDA1UY73FzcQuD97tiEV2kLTyT6Jc"
+    const TELEGRAM_CHAT_ID = "1002448649276"
+    // const bot = new TelegramBot(TELEGRAM_BOT_TOKEN,{testEnvironment:true});
+    const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
     const handleSubmit = async (e: React.FormEvent, question: string = input) => {
         e.preventDefault();
@@ -103,12 +106,12 @@ const AIChat: FC = () => {
         setIsLoading(true);
 
         const prompt = `
-            ${portfolioData}
+        ${portfolioData}
 
-            A recruiter will ask you a question based on this information. Answer the recruiter's question accurately, using ONLY the information provided in my portfolio. DO NOT generate any information outside of the portfolio data. Keep your answer concise and limit it to a maximum of 250 words. Respond DIRECTLY to the question, without any introductory phrases like 'Okay, I understand' or 'Here's my answer'. Format your response using markdown to make it usable by react-markdown, including bullet points, headings, and code blocks where appropriate
+        A recruiter will ask you a question based on this information. Answer the recruiter's question accurately, using ONLY the information provided in my portfolio. DO NOT generate any information outside of the portfolio data. Keep your answer concise and limit it to a maximum of 250 words. Respond DIRECTLY to the question, without any introductory phrases like 'Okay, I understand' or 'Here's my answer'. Format your response using markdown to make it usable by react-markdown, including bullet points, headings, and code blocks where appropriate
 
-            Recruiter's Question: ${question}
-        `;
+        Recruiter's Question: ${question}
+    `;
 
         try {
             const response = await fetch(API_URL, {
@@ -130,6 +133,24 @@ const AIChat: FC = () => {
             const data = await response.json();
             const aiResponse = data.candidates[0]?.content?.parts[0]?.text || "Sorry, I couldn’t process that.";
             setMessages((prev) => [...prev, `AI: ${aiResponse}`]);
+
+            // Send question and response to Telegram via server endpoint
+            // await bot.sendMessage(TELEGRAM_CHAT_ID as string, JSON.stringify({question, answer: aiResponse}), {parse_mode: 'MarkdownV2'})
+            //      .catch((telegramError) => {
+            //          console.error("Error sending Telegram notification:", telegramError); // Simple console error
+            //      });
+            //
+            // Send to Telegram directly
+            fetch(TELEGRAM_API_URL, {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({
+                    chat_id: -TELEGRAM_CHAT_ID,
+                    text: `Question:${question}`,
+                    parse_mode: "Markdown",
+                }),
+            }).catch((error) => console.error("Error sending to Telegram:", error));
+
         } catch (error) {
             console.error("Error fetching Gemini API:", error);
             setMessages((prev) => [...prev, "AI: Oops, something went wrong. Try again!"]);
@@ -139,7 +160,7 @@ const AIChat: FC = () => {
         }
     };
 
-    return  (
+    return (
         <>
             {/* Floating Button */}
             <button
@@ -174,7 +195,8 @@ const AIChat: FC = () => {
 
             {/* Chat Modal */}
             {isOpen && (
-                <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 animate-fade-in">
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 animate-fade-in">
                     <div
                         className="
                             bg-[gray]
@@ -187,7 +209,8 @@ const AIChat: FC = () => {
                         "
                     >
                         {/* Decorative Top Gradient */}
-                        <div className="absolute top-0 left-0 w-full h-1 sm:h-2 bg-gradient-to-r from-cyan-400 via-blue-600 to-transparent" />
+                        <div
+                            className="absolute top-0 left-0 w-full h-1 sm:h-2 bg-gradient-to-r from-cyan-400 via-blue-600 to-transparent"/>
 
                         {/* Close Button */}
                         <button
@@ -216,7 +239,8 @@ const AIChat: FC = () => {
                         </h3>
 
                         {/* Messages */}
-                        <div className="h-[60vh] sm:h-96 overflow-y-auto text-gray-200 mb-4 sm:mb-8 scrollbar-thin scrollbar-thumb-cyan-400 scrollbar-track-gray-800 scrollbar-rounded scrollbar-hover:scrollbar-thumb-cyan-300">
+                        <div
+                            className="h-[60vh] sm:h-96 overflow-y-auto text-gray-200 mb-4 sm:mb-8 scrollbar-thin scrollbar-thumb-cyan-400 scrollbar-track-gray-800 scrollbar-rounded scrollbar-hover:scrollbar-thumb-cyan-300">
                             {messages.map((msg, idx) => (
                                 <div
                                     key={idx}
@@ -227,14 +251,15 @@ const AIChat: FC = () => {
                                     } max-w-[85%] w-fit shadow-sm`}
                                 >
                                     {msg.startsWith("AI:") ? (
-                                        <ReactMarkdown children={msg.replace("AI: ", "")} />
+                                        <ReactMarkdown children={msg.replace("AI: ", "")}/>
                                     ) : (
                                         msg
                                     )}
                                 </div>
                             ))}
                             {isLoading && (
-                                <div className="py-2 px-3 sm:py-3 sm:px-5 mb-2 sm:mb-3 rounded-lg sm:rounded-xl bg-gray-600 text-gray-200 max-w-[85%] w-fit shadow-sm animate-pulse">
+                                <div
+                                    className="py-2 px-3 sm:py-3 sm:px-5 mb-2 sm:mb-3 rounded-lg sm:rounded-xl bg-gray-600 text-gray-200 max-w-[85%] w-fit shadow-sm animate-pulse">
                                     AI: Thinking...
                                 </div>
                             )}
