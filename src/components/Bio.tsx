@@ -7,6 +7,8 @@ import Location from "../assets/icons/Location";
 import Date from "../assets/icons/Date";
 import Stackoverflow from "../assets/icons/StackOverFlow";
 import Typewriter from "typewriter-effect";
+import GitHub from "../assets/icons/Github.tsx";
+
 export const bioText = `
         I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I’ve been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices.
     `;
@@ -55,6 +57,12 @@ const Bio: FC = () => {
             icon: <LinkedIn/>,
             text: "/in/daniel-kasem",
             href: "https://www.linkedin.com/in/daniel-kasem-70bba9a4/",
+            target: "_blank",
+        },
+        {
+            icon: <GitHub/>,
+            text: "daniel-kasem",
+            href: "https://github.com/specture48",
             target: "_blank",
         },
         {

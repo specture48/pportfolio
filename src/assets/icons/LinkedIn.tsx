@@ -1,7 +1,7 @@
 function LinkedIn() {
 	return (
 		<svg
-			className="fill-current text-[#6881cb] hover:text-[#0077b5] transition-colors duration-300"
+			className="fill-current text-[#6881cb] transition-colors duration-300"
 			width="40px"
 			height="40px"
 			role="img"

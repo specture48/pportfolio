@@ -31,6 +31,7 @@ export const projectsData: IProject[] = [
             getImage("ordro/7.png"),
             getImage("ordro/8.png"),
             getImage("ordro/9.png"),
+            "https://play-lh.googleusercontent.com/6geqlIS9GSHvaPaHQEHuenDUsuSEM1aS22CXOZbSWiZwMaxKi-VjLadmxWTGrQNka1CV=w526-h296-rw",
         ],
         stack: ["express", "react", "flutter"],
         description: "a comprehensive solution\nencompassing promotions, shipping, and stock management functionalities. The platform is designed to\nstreamline business-to-business transactions, providing a seamless experience for users involved in buying and\nselling products.",
@@ -156,6 +157,16 @@ export const projectsData: IProject[] = [
         ]
     },
     {
+        title: "Citizen Meds",
+        link: "https://citizenmeds.com",
+        images: [
+            getImage("citizen-meds/1.png"), // Add actual image paths if you have them
+            getImage("citizen-meds/2.png"),
+        ],
+        stack: ["react", "node", "express"], // Adjust based on actual tech stack used
+        description: "A telehealth platform providing physician-approved injection home kits for weight management and men's health. Features include seamless ordering, overnight shipping, and a comprehensive solution for GLP-1 weight loss treatments like Semaglutide and Tirzepatide.",
+    },
+    {
         title: "Vitastir",
         link: "https://thevitatest.com",
         stack: ["laravel", "react", "next", "nest", 'socketio'],
@@ -184,6 +195,7 @@ export const projectsData: IProject[] = [
             getImage("vita/18.png"),
         ]
     },
+
     // {
     //     title: "Review System",
     //     link: "",
@@ -219,18 +231,18 @@ export const projectsData: IProject[] = [
 ]
 
 //TODO mention that we use NX,SAAS Multi tenancy Structure
-export const iconMap = {
-    // "nest": <NestjsLine color="white" size="75"/>,
-    // "laravel": <LaravelLine color="white" size="75"/>,
-    // "flutter": <FlutterPlain color="white" size="75"/>,
-    // "swift": <SwiftPlain color="white" size="75"/>,
-    // "android": <AndroidPlain color="white" size="75"/>,
-    // "node": <NodejsLine color="white" size="75"/>,
-    // "graphql": <GraphqlPlain color="white" size="75"/>,
-    // "socketio": <SiSocketDotIo size="75"/>,
-    // "react": <SiReact size="75"/>,
-    // "netcore": <DotnetcorePlain color="white" size="75"/>,
-}
+// export const iconMap = {
+//     // "nest": <NestjsLine color="white" size="75"/>,
+//     // "laravel": <LaravelLine color="white" size="75"/>,
+//     // "flutter": <FlutterPlain color="white" size="75"/>,
+//     // "swift": <SwiftPlain color="white" size="75"/>,
+//     // "android": <AndroidPlain color="white" size="75"/>,
+//     // "node": <NodejsLine color="white" size="75"/>,
+//     // "graphql": <GraphqlPlain color="white" size="75"/>,
+//     // "socketio": <SiSocketDotIo size="75"/>,
+//     // "react": <SiReact size="75"/>,
+//     // "netcore": <DotnetcorePlain color="white" size="75"/>,
+// }
 
 const Projects: FC = () => {
 

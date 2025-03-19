@@ -24,7 +24,6 @@ interface PortfolioData {
     skills: SkillCategory[];
 }
 
-//TODO add location,cv link
 const jsonToPortfolioString = (data: PortfolioData): string => {
     const {certificates, projects, skills, educations, workExperiences} = data;
 
@@ -71,6 +70,7 @@ const jsonToPortfolioString = (data: PortfolioData): string => {
     return `bornYear:1999,phone:+963931869085\n
     email:daniel.f.kasem@gmail.com\n
     links:${[
+        'Download CV:https://daniel-kasem48.github.io/portfolio/cv.pdf',
         'https://www.linkedin.com/in/daniel-kasem-70bba9a4/',
         'https://stackoverflow.com/users/21441411/daniel-kasem',
     ].join(',')}\nBIO:${bioText}\n${certificatesStr}\n${projectsStr}\n${skillsStr}\n${educationsStr}\n${workExperiencesStr}`;

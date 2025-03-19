@@ -8,12 +8,17 @@ import TechSkillsSection from "../components/TechSkill.tsx";
 import CertificatesSection from "../components/CertificatesSection.tsx";
 import AIChat from "../components/AiChat.tsx";
 
+// import OpenSource from "../components/Opensource.tsx";
+
 function Home() {
     return (
-        <div className="h-full  pt-[100px]  mx-10">
+        <div className="h-full   pt-[100px]  mx-10">
             <div className="">
                 <Bio/>
                 <AIChat/>
+
+
+                {/*<TestSkills/>*/}
                 {/*<OpenSource/>*/}
                 {/*<Timeline/>*/}
                 <TechSkillsSection/>

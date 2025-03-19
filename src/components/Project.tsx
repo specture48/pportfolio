@@ -1,7 +1,9 @@
-import {FC} from "react";
+import { FC } from "react";
 import useModal from "../hooks/useModal.tsx";
 import Carousel from "./Carousel.tsx";
-import {iconMap} from "./Projects.tsx";
+// import { iconMap } from "./Projects.tsx";
+import Website from "../assets/icons/Website.tsx";
+import ScreenShot from "../assets/icons/ScreenShot.tsx";
 
 export interface IProject {
     images: string[];
@@ -11,84 +13,98 @@ export interface IProject {
     description: string;
 }
 
-const Project: FC<{ project: IProject }> = ({project}) => {
-    const {link, title, images, description, stack} = project;
-    const [SliderModal, {open}] = useModal();
+const Project: FC<{ project: IProject }> = ({ project }) => {
+    const { link, title, images, description } = project;
+    const [SliderModal, { open }] = useModal();
+    // Use the first image as the featured image if available
+    const featuredImage = images.length > 0 ? images[0] : null;
 
     return (
-        <div
-            className="flex rounded-md transition-all duration-1000 flex-col p-10 text-white border-[1px] h-full">
-            <SliderModal className="">
-                <Carousel slides={images}/>
+        <div className="group relative rounded-xl transition-all duration-300
+            flex-col p-6 text-white border-[1px] border-gray-800
+            bg-gradient-to-br from-gray-900 to-black
+            hover:shadow-xl hover:shadow-blue-500/20
+            transform hover:-translate-y-1 h-full">
+
+            <SliderModal className="z-50">
+                <Carousel slides={images} />
             </SliderModal>
 
-            <div className="flex h-full flex-col items-center justify-between my-auto">
-                <div className="text-4xl font-extrabold leading-none mb-5">
+            <div className="flex h-full flex-col justify-between">
+                {/* Featured Image */}
+                {featuredImage && (
+                    <div className="mb-4 overflow-hidden rounded-lg">
+                        <img
+                            src={featuredImage}
+                            alt={`${title} preview`}
+                            className="w-full h-48 object-cover
+                                transform transition-transform duration-300
+                                group-hover:scale-105"
+                            loading="lazy"
+                        />
+                    </div>
+                )}
+
+                {/* Title */}
+                <div className="text-3xl font-bold tracking-tight mb-4
+                    text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                     {title}
                 </div>
 
-                <div className="w-full h-full text-xl">
+                {/* Description */}
+                <div className="text-gray-300 text-lg leading-relaxed mb-6 flex-grow">
                     <p>{description}</p>
                 </div>
 
-                <div className="mt-5 flex justify-between w-full">
-                    {stack.map((skillName) => {
-                        //@ts-ignore
-                        const Comp = iconMap[skillName];
-                        return Comp;
-                    })}
-                </div>
+                {/* Tech Stack */}
+                {/*<div className="flex flex-wrap gap-3 mb-6">*/}
+                {/*    {stack.map((skillName, index) => {*/}
+                {/*        const Comp = iconMap[skillName];*/}
+                {/*        return (*/}
+                {/*            <div key={index} className="transform transition-transform hover:scale-110">*/}
+                {/*                {Comp}*/}
+                {/*            </div>*/}
+                {/*        );*/}
+                {/*    })}*/}
+                {/*</div>*/}
 
-                <div className="flex justify-center gap-4 mt-5 px-5 items-center">
-                    {Boolean(project.images.length) && (
+                {/* Buttons */}
+                <div className="flex flex-wrap gap-4 justify-center">
+                    {Boolean(images.length) && (
                         <button
-                            className="w-[200px] rounded text-white p-2 flex items-center justify-center  md:border-[#6881cb]"
+                            className="flex items-center justify-center gap-2 px-4 py-2
+                                rounded-lg bg-blue-600 hover:bg-blue-700
+                                transition-colors duration-200
+                                text-white font-medium"
                             onClick={open}
                             title="show screenshots"
                         >
-                            <svg
-                                className="w-8 h-8 md:w-12 md:h-12 animate-spin-slow text-[#6881cb] hover:text-[#0077b5] transition-colors duration-300"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                />
-                            </svg>
-                            <span className="ml-2 text-navy-blue">Screenshots</span>
+                            <ScreenShot />
+                            <span>Screenshots</span>
                         </button>
                     )}
 
-                    {Boolean(project.link) && (
+                    {Boolean(link) && (
                         <a
-                            className="md:w-[200px] rounded text-white p-2 flex items-center justify-center"
+                            className="flex items-center justify-center gap-2 px-4 py-2
+                                rounded-lg bg-purple-600 hover:bg-purple-700
+                                transition-colors duration-200
+                                text-white font-medium"
                             target="_blank"
                             href={link}
                             title="open website"
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                className="w-8 h-8 animate-spin-slow text-[#6881cb] hover:text-[#0077b5] transition-colors duration-300"
-                                fill="none"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                />
-                            </svg>
+                            <Website />
+                            <span>Visit Site</span>
                         </a>
                     )}
                 </div>
             </div>
+
+            {/* Overlay effect */}
+            <div className="absolute inset-0 bg-blue-500/10 opacity-0
+                group-hover:opacity-100 transition-opacity duration-300
+                rounded-xl pointer-events-none"></div>
         </div>
     );
 };

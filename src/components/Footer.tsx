@@ -1,7 +1,7 @@
 import {FC} from "react";
 
 const Footer: FC = () => {
-    return <div className="mt-10">
+    return <div className="mt-10 ">
         <hr/>
         <div className="p-10  text-white items-center flex justify-between ">
             <div>

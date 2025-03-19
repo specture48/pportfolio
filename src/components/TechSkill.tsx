@@ -1,4 +1,5 @@
 import {ReactNode} from "react";
+import NewSkills from "./NewSkills.tsx";
 
 export const techSkillsData = [
     {
@@ -112,15 +113,17 @@ const TechSkillsSection = () => {
 
                             {/* Skills List */}
                             <ul className="space-y-2 text-gray-300">
-                                {category.skills.map((skill, idx) => (
-                                    <li
-                                        key={idx}
-                                        className="flex items-center text-lg md:text-xl group-hover:text-white transition-colors duration-300"
-                                    >
-                                        <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"/>
-                                        {skill}
-                                    </li>
-                                ))}
+
+                                <NewSkills skills={category.skills}/>
+                                {/*{category.skills.map((skill, idx) => (*/}
+                                {/*    // <li*/}
+                                {/*    //     key={idx}*/}
+                                {/*    //     className="flex items-center text-lg md:text-xl group-hover:text-white transition-colors duration-300"*/}
+                                {/*    // >*/}
+                                {/*    //     <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"/>*/}
+                                {/*    //     {skill}*/}
+                                {/*    // </li>*/}
+                                {/*))}*/}
                             </ul>
                         </div>
                     ))}
