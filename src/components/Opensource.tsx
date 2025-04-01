@@ -1,34 +1,98 @@
-import { FC } from "react";
+import {FC, useRef} from "react";
+
+interface OpenSourceProject {
+    name: string;
+    description: string;
+    features: string[];
+    github: string;
+    npm?: string;
+}
+
+const projects: OpenSourceProject[] = [
+    {
+        name: "Flowtify",
+        description: "A flexible and robust TypeScript library for defining and executing workflows.",
+        features: [
+            "Sequential/parallel execution",
+            "Compensation handling",
+            "Dependency injection",
+        ],
+        github: "https://github.com/specture48/flowtify",
+        npm: "https://www.npmjs.com/package/flowtify",
+    },
+    {
+        name: "Medusa FCM Notification",
+        description: "Firebase Cloud Messaging (FCM) notification provider for Medusa.",
+        features: [
+            "Push notifications for Medusa",
+            "FCM integration",
+            "Customizable channels",
+        ],
+        github: "https://github.com/specture48/medusa-fcm-notification",
+        npm: "https://www.npmjs.com/package/medusa-fcm-notification",
+    },
+];
+
+const OpenSourceCard: FC<{ project: OpenSourceProject }> = ({project}) => {
+
+    return (
+
+        <div
+            className="bg-gray-800 bg-opacity-80 backdrop-blur-md rounded-xl p-5 shadow-md hover:bg-gray-700 transition-all duration-300">
+            <h3 className="text-xl font-bold text-white">{project.name}</h3>
+            <p className="text-gray-300 mt-2">{project.description}</p>
+            <ul className="text-gray-300 mt-2 list-disc list-inside">
+                {project.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                ))}
+            </ul>
+            <div className="mt-4 flex gap-4">
+                <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-navy-blue text-cyan-400 px-4 py-2 rounded-lg hover:bg-cyan-400 transition-all duration-300"
+                >
+                    GitHub
+                </a>
+                {project.npm && (
+                    <a
+                        href={project.npm}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-navy-blue text-green-400 px-4 py-2 rounded-lg hover:bg-green-400  transition-all duration-300"
+                    >
+                        NPM
+                    </a>
+                )}
+            </div>
+        </div>
+    );
+};
 
 const OpenSource: FC = () => {
+    const openSourceRef = useRef(null);
+
     return (
-        <section className="py-20 bg-gradient-to-b from-gray-900 to-navy-blue text-white">
+        <section  id="opensource" ref={openSourceRef} className=" bg-gradient-to-b  pt-[80px] from-gray-900 to-navy-blue text-white">
             <div className="container mx-auto px-4 pt-16">
-                <h2 className="text-5xl md:text-6xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600">
-                    Open Source & Packages
-                </h2>
-                <p className="text-center text-gray-300 max-w-2xl mx-auto mb-12">
-                    As a backend developer, I’m passionate about building tools that simplify workflows. Check out my flow management package and join the open-source journey!
+                <p
+                    className="
+                        text-4xl md:text-6xl lg:text-8xl
+                        w-full text-center font-extrabold mb-10
+                        text-navy-blue bg-black py-4 border-b-4
+                        tracking-tight shadow-lg
+                    "
+                >
+                    Open Source
                 </p>
+                {/*<p className="text-center text-gray-300 max-w-2xl mx-auto mb-12">*/}
+                {/*    As a backend developer, I’m passionate about building scalable and efficient tools that enhance developer productivity. Check out my open-source contributions and join the journey!*/}
+                {/*</p>*/}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="bg-gray-800 bg-opacity-80 backdrop-blur-md rounded-xl p-5 shadow-md hover:bg-navy-blue transition-all duration-300">
-                        <h3 className="text-xl font-bold text-white">FlowMaster</h3>
-                        <p className="text-gray-300 mt-2">A Node.js package for managing asynchronous task flows with built-in error handling and scalability.</p>
-                        <ul className="text-gray-300 mt-2 list-disc list-inside">
-                            <li>Task queuing</li>
-                            <li>Custom pipelines</li>
-                            <li>Robust error recovery</li>
-                        </ul>
-                        <a
-                            href="https://github.com/yourusername/flowmaster"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-4 inline-block bg-navy-blue text-cyan-400 px-4 py-2 rounded-lg hover:bg-cyan-400 hover:text-navy-blue transition-all duration-300"
-                        >
-                            View on GitHub
-                        </a>
-                    </div>
-                    {/* Add more cards for other contributions here */}
+                    {projects.map((project, index) => (
+                        <OpenSourceCard key={index} project={project}/>
+                    ))}
                 </div>
             </div>
         </section>

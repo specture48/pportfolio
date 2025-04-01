@@ -7,6 +7,7 @@ import ChallengesAndOptimizations from "../components/ChallengesAndOptimizations
 import TechSkillsSection from "../components/TechSkill.tsx";
 import CertificatesSection from "../components/CertificatesSection.tsx";
 import AIChat from "../components/AiChat.tsx";
+import OpenSource from "../components/Opensource.tsx";
 
 // import OpenSource from "../components/Opensource.tsx";
 
@@ -19,11 +20,11 @@ function Home() {
 
 
                 {/*<TestSkills/>*/}
-                {/*<OpenSource/>*/}
                 {/*<Timeline/>*/}
                 <TechSkillsSection/>
                 {/*<Skills/>*/}
                 <Projects/>
+                <OpenSource/>
                 <WorkExperiences  />
                 <Educations/>
                 <CertificatesSection/>

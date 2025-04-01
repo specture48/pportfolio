@@ -7,6 +7,7 @@ const NavBar: FC = () => {
         { href: "#aboutme", label: "About me" },
         { href: "#skills", label: "Skills" },
         { href: "#projects", label: "Projects" },
+        { href: "#opensource", label: "OpenSource" },
         { href: "#work-experiences", label: "Work Experience" },
         { href: "#educations", label: "Education" },
         { href: "#certificates", label: "Certificates" },
