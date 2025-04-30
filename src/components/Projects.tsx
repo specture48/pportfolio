@@ -19,6 +19,15 @@ export function getImage(path: string) {
 
 export const projectsData: IProject[] = [
     {
+        images: [getImage("number5/1.jpg"), getImage("number5/2.jpg")], // adjust image paths if needed
+        title: "Number5.ai",
+        stack: ["Node.js", "python", "zapier", "Automation Flows"], // replace/add tech you actually used
+        link: "https://www.number5.ai",
+        description: `Built intelligent automation flows for lead engagement at Number5.ai, an AI business assistant platform. 
+Designed sequences combining calls, SMS, and scheduled delays (e.g., Call ➔ SMS ➔ Wait ➔ Call again) to boost lead conversion rates. 
+Integrated multi-channel communication APIs and optimized flow reliability and scalability.`
+    },
+    {
         title: "Ordro",
         link: "https://play.google.com/store/apps/details?id=com.ordro.retailapp&hl=en",
         images: [

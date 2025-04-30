@@ -31,7 +31,19 @@ const projects: OpenSourceProject[] = [
         github: "https://github.com/specture48/medusa-fcm-notification",
         npm: "https://www.npmjs.com/package/medusa-fcm-notification",
     },
+    {
+        name: "Medusa Documents (Arabic Support Fork)",
+        description: "A plugin for Medusa.js that generates PDF documents (e.g., invoices, packing slips) with added Arabic language support.",
+        features: [
+            "Arabic language support",
+            "Invoice and packing slip generation",
+            "Seamless Medusa.js integration",
+        ],
+        github: "https://github.com/specture48/medusa-documents-arabic",
+        npm: "https://www.npmjs.com/package/medusa-documents-arabic",
+    },
 ];
+
 
 const OpenSourceCard: FC<{ project: OpenSourceProject }> = ({project}) => {
 
