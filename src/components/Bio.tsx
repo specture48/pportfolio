@@ -10,7 +10,7 @@ import Typewriter from "typewriter-effect";
 import GitHub from "../assets/icons/Github.tsx";
 
 export const bioText = `
-        I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I’ve been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices.
+        I am a seasoned web developer with a strong focus on backend technologies. My expertise spans PHP with the Laravel framework, Node.js using Express and Nest.js. Recently, I've expanded my skill set to include Golang, where I've been able to harness its power for efficient and scalable backend solutions. I am proficient in working with both MySQL and PostgreSQL databases, always prioritizing project success and delivering high-quality results. My commitment to continuous learning ensures that I stay aligned with the latest industry trends and best practices.
     `;
 
 
@@ -76,19 +76,17 @@ const Bio: FC = () => {
     return (
         <section id="aboutme" className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
             <div className="container mx-auto px-4">
+                
                 {/* Section Title */}
-
                 <div className="container mx-auto">
-
                     <p
                         className="
           text-4xl md:text-6xl lg:text-8xl
-
     w-full
-    mt-10
+    mt-6
     text-center
     font-extrabold
-    mb-10
+    mb-6
     text-navy-blue
     bg-black
     border-b-4
@@ -97,21 +95,24 @@ const Bio: FC = () => {
     shadow-lg
   "
                     >
-                        About me
+                        About Me
                     </p>
                 </div>
-
-                <div className="flex flex-col lg:flex-row gap-12">
+                <div className="flex flex-col lg:flex-row gap-12 mt-8">
                     {/* Contact Info */}
-                    <div className="lg:w-1/3">
-                        <div
-                            className="bg-gray-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl md:border border-gray-700">
+                    <div className="lg:w-1/3 flex flex-col items-center">
+                        <div className="bg-gray-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl md:border border-cyan-700 shadow-lg w-full max-w-xs">
+                            {/* Profile Image Placeholder */}
+                            <div className="flex justify-center mb-6">
+                                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-cyan-400 to-blue-700 flex items-center justify-center text-4xl font-bold text-white shadow-lg border-4 border-cyan-700">
+                                    DK
+                                </div>
+                            </div>
                             <h3 className="text-2xl font-semibold text-cyan-400 mb-6 text-center">Contact</h3>
                             <div className="space-y-4">
                                 {contactItems.map((item, index) => (
                                     <div key={index} className="flex items-center gap-4 group">
-                                        <span
-                                            className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                                        <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
                                             {item.icon}
                                         </span>
                                         {item.href ? (
@@ -131,10 +132,14 @@ const Bio: FC = () => {
                             </div>
                         </div>
                     </div>
-
+                    {/* Divider for mobile */}
+                    <div className="block lg:hidden my-8">
+                        <div className="h-1 w-2/3 mx-auto bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full opacity-60"></div>
+                    </div>
                     {/* Bio Text */}
-                    <div className="lg:w-2/3">
-                        <div className="bg-gray-800 bg-opacity-80 backdrop-blur-md p-6 rounded-xl  border-gray-700">
+                    <div className="lg:w-2/3 flex flex-col justify-center items-center">
+                        <div className="bg-gradient-to-br from-gray-800 to-gray-900 bg-opacity-90 p-8 rounded-2xl border-l-8 border-cyan-500 shadow-2xl w-full max-w-2xl relative">
+                            {/* Bio Text with Typewriter */}
                             <div className="hidden md:block">
                                 <Typewriter
                                     options={{
@@ -145,13 +150,15 @@ const Bio: FC = () => {
                                     onInit={(typewriter) => {
                                         typewriter
                                             .typeString(
-                                                `<p class="text-lg md:text-2xl space-y-10 leading-relaxed text-gray-300">${bioText}</p>`
+                                                `<blockquote class=\"text-lg md:text-2xl leading-relaxed text-gray-400 font-light pl-6 rounded-bl-2xl\">${bioText}</blockquote>`
                                             )
                                             .start();
                                     }}
                                 />
                             </div>
-                            <p className="block md:hidden text-lg leading-relaxed text-gray-300">{bioText}</p>
+                            <blockquote className="block md:hidden text-lg leading-relaxed text-gray-400 font-light pl-6 rounded-bl-2xl">
+                                {bioText}
+                            </blockquote>
                         </div>
                     </div>
                 </div>

@@ -98,12 +98,13 @@ const AIChat: FC = () => {
     // Replace with your actual Gemini API key
     const API_KEY = "AIzaSyCKRVn92ORlYJYWY8somJsAma3WLXQMBwc";
     const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
+
     const TELEGRAM_BOT_TOKEN = "7636512900:AAHhTpTDA1UY73FzcQuD97tiEV2kLTyT6Jc"
     const TELEGRAM_CHAT_ID = "1002448649276"
     const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
 
-    // Placeholder for handleSubmit (assuming you’ll add API logic here)
+    // Placeholder for handleSubmit (assuming you'll add API logic here)
     const handleSubmit = async (e: React.FormEvent, question: string = input) => {
         e.preventDefault();
         if (!question.trim()) return;
@@ -112,12 +113,20 @@ const AIChat: FC = () => {
         setIsLoading(true);
 
         const prompt = `
-        ${portfolioData}
+You are Daniel Kasem, and the following is your complete portfolio data:
 
-        A recruiter will ask you a question based on this information. Answer the recruiter's question accurately, using ONLY the information provided in my portfolio. DO NOT generate any information outside of the portfolio data. Keep your answer concise and limit it to a maximum of 250 words. Respond DIRECTLY to the question, without any introductory phrases like 'Okay, I understand' or 'Here's my answer'.Respond acting you are the owner of portfolio. Format your response using markdown to make it usable by react-markdown, including bullet points, headings, and code blocks where appropriate
+${portfolioData}
 
-        Recruiter's Question: ${question}
-    `;
+A recruiter will ask you a question about your background, skills, or experience. Please answer as yourself, using ONLY the information provided above. Do NOT invent or assume any details not present in the portfolio.
+
+Instructions for your response:
+- Answer directly and concisely (max 250 words).
+- Do NOT use introductory phrases (e.g., "Sure," "Here's my answer," etc.).
+- Use markdown formatting for clarity: headings, bullet points, and code blocks where appropriate.
+- If the answer is not in the portfolio, politely state that the information is not available.
+
+Recruiter's Question: ${question}
+`;
 
         try {
             const response = await fetch(API_URL, {
@@ -137,7 +146,7 @@ const AIChat: FC = () => {
             if (!response.ok) throw new Error("API request failed");
 
             const data = await response.json();
-            const aiResponse = data.candidates[0]?.content?.parts[0]?.text || "Sorry, I couldn’t process that.";
+            const aiResponse = data.candidates[0]?.content?.parts[0]?.text || "Sorry, I couldn't process that.";
             setMessages((prev) => [...prev, `AI: ${aiResponse}`]);
 
             // Send to Telegram directly
@@ -391,7 +400,7 @@ const AIChat: FC = () => {
 //             if (!response.ok) throw new Error("API request failed");
 //
 //             const data = await response.json();
-//             const aiResponse = data.candidates[0]?.content?.parts[0]?.text || "Sorry, I couldn’t process that.";
+//             const aiResponse = data.candidates[0]?.content?.parts[0]?.text || "Sorry, I couldn't process that.";
 //             setMessages((prev) => [...prev, `AI: ${aiResponse}`]);
 //
 //             // Send to Telegram directly
